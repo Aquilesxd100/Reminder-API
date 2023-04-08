@@ -1,9 +1,10 @@
-import { ReminderEditType, ReminderType } from "../types/types";
+import { ReminderEditType } from "../types/types";
 import crypto from "crypto";
+import Reminder from "./Reminder";
 
 export default class User {
     private id: string = crypto.randomUUID();
-    private reminders: Array<ReminderType> = [];
+    private reminders: Array<Reminder> = [];
     constructor(
         private userName: string,
         private password: string,
@@ -24,20 +25,20 @@ export default class User {
     getReminder(indexReminder : number) {
         return this.reminders[indexReminder];
     };
-    newReminder(reminder : ReminderType) {
+    newReminder(reminder : Reminder) {
         this.reminders.push(reminder);
     };
     deleteReminder(reminderIndex : number) {
         this.reminders.splice(reminderIndex, 1);
     };
     editReminder(reminderIndex : number, newInfos : ReminderEditType) {
-        const originalReminder : ReminderType = this.reminders[reminderIndex];
-        this.reminders[reminderIndex] = {
-            id : originalReminder.id,
-            action : newInfos.action || originalReminder.action,
-            date: newInfos.date || originalReminder.date,
-            time: newInfos.time || originalReminder.time,
-            description : newInfos.description || originalReminder.description
-        };
+        const originalReminder : Reminder = this.reminders[reminderIndex];
+        this.reminders[reminderIndex] = new Reminder(
+            newInfos.action || originalReminder.getAction(),
+            newInfos.date || originalReminder.getDate(),
+            newInfos.time || originalReminder.getTime(),
+            newInfos.description || originalReminder.getDescription(),
+            originalReminder.getReminderId()
+        );
     };
 };

@@ -16,6 +16,8 @@ registerRoutes(app);
 // TESTES CLASSES
 /* import User from "../src/models/User";
 import UserList from "./models/UserList";
+import Reminder from "./models/Reminder";
+
 const usuario1 = new User("alex", "1234a");
 const usuario2 = new User("fernando", "123a");
 const dataBase = new UserList;
@@ -24,11 +26,11 @@ dataBase.addUser(usuario2);
 console.log(dataBase.getUserById("fernando")?.getReminders());
 console.log("#####################")
 const getUserFernando = dataBase.getUserById("fernando");
-getUserFernando?.newReminder({ action: "escovar dentes", id: "123", date: "20/15/2020", description: "testeeee", time: "20:20" });
+getUserFernando?.newReminder(new Reminder("escovar dentes", "20/15/2020", "20:20", "testeeee"));
+usuario1.newReminder(new Reminder("tomar banho", "20/15/2020", "20:20", "testeeee"));
+usuario2.newReminder(new Reminder("lavar o cachorro", "20/15/2020", "20:20", "testeeee"));
 console.log(dataBase.getUserById("fernando")?.getReminders());
- */
-/* usuario1.newReminder({ action: "escovar dentes", id: "123", date: "20/15/2020", description: "testeeee", time: "20:20" });
-usuario2.newReminder({ action: "tomar banho", id: "123", date: "20/15/2020", description: "testeeee", time: "20:20" });
-usuario2.editReminder(0, { action: "teste" });
-console.log(usuario2); */
+console.log("#####################")
+usuario2.editReminder(1, { action: "teste", date: "06/06/12" });
+console.log(dataBase.getUserById("fernando")?.getReminders()); */
 //

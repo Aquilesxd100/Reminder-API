@@ -1,7 +1,7 @@
 import { ReminderEditType, ReminderType } from "../types/types";
 import crypto from "crypto";
 
-export class User {
+export default class User {
     private id: string = crypto.randomUUID();
     private reminders: Array<ReminderType> = [];
     constructor(

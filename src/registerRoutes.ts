@@ -11,7 +11,7 @@ function registerRoutes(app : any) {
     // Criacao de Conta
     // recebe - infosNovaConta
     // retorna - mensagem de sucesso OU Erro
-    app.post("", (req : Request, res : Response) => {
+    app.post("/newuser/:userName/:password", (req : Request, res : Response) => {
 
     });
 

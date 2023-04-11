@@ -1,4 +1,5 @@
-import registerRoutes from "./routes";
+import registerMiddlewares from "./registerMiddlewares";
+import registerRoutes from "./registerRoutes";
 require("dotenv").config();
 
 const express = require("express");
@@ -12,7 +13,7 @@ app.listen(
     port, () => console.log(`Aplicacao ativa escutando a porta ${port}.`)
 );
 
-
+registerMiddlewares(app);
 registerRoutes(app);
 
 // TESTES CLASSES

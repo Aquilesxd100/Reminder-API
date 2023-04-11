@@ -11,11 +11,13 @@ export default class UserList {
     deleteUser(userIndex : number) {
         this.userList.splice(userIndex, 1);
     };
-    getUserById(userId : string) {
-        return this.userList.find(user => user.getUserName() === userId);
-        /* return this.userList.find(user => user.getUserId() === userId); */
+    getUserByUserName(userName : string) : User | undefined {
+        return this.userList.find(user => user.getUserName() === userName);
     };
-    getUserList() {
+    getUserById(userId : string) : User | undefined {
+        return this.userList.find(user => user.getUserId() === userId);
+    };
+    getUserList() : Array<User>  {
         return this.userList;
     };
 };

@@ -4,47 +4,54 @@ import remindersController from "./controllers/getRemindersController";
 
 function registerRoutes(app : any) {
     // Login 
-    // recebe - infosConta
-    // retorna - tokenTemporario + tokenRefresh + id usuario OU Erro
+    // recebe - infosConta (login/senha por params)
+    // retorna - token (com id usuario) OU Erro
     app.get("/login/:userName/:password", loginController);
 
     // Criacao de Conta
-    // recebe - infosNovaConta
+    // recebe - infosNovaConta (login/senha por params)
     // retorna - mensagem de sucesso OU Erro
     app.post("/newuser/:userName/:password", (req : Request, res : Response) => {
 
     });
 
     // Exclusao de Conta
-    // recebe - id usuario
+    // recebe - token (com id usuario)
     // retorna - mensagem de sucesso OU Erro
-    app.post("", (req : Request, res : Response) => {
+    app.delete("", (req : Request, res : Response) => {
 
     });
 
     // Listar Recados
-    // recebe - id usuario
-    // retorna - tokenTemporario + tokenRefresh + id usuario OU Erro
+    // recebe - token (com id usuario)
+    // retorna - recados do usuario OU Erro
     app.get("/reminders", remindersController);
 
     // Criacao de Recado
-    // recebe - id usuario, infosRecado
-    // retorna - mensagem de sucesso OU Erro
+    // recebe - token (com id usuario), infosRecado
+    // retorna - recados usuario atualizado OU Erro
     app.post("", (req : Request, res : Response) => {
 
     });
 
     // Edicao de Recado
-    // recebe - id usuario, id recado, NovasInfosRecado
-    // retorna - usuario atualizado (completo)??? OU Erro
+    // recebe - token (com id usuario), id recado, NovasInfosRecado
+    // retorna - recados usuario atualizado OU Erro
     app.put("", (req : Request, res : Response) => {
 
     });
     
     // Exclusao de Recado
-    // recebe - id usuario, id recado
-    // retorna - usuario atualizado (completo)??? OU Erro
+    // recebe - token (com id usuario), id recado
+    // retorna - recados usuario atualizado OU Erro
     app.delete("", (req : Request, res : Response) => {
+
+    });
+
+    // Arquivar/Desarquivar Recado
+    // recebe - token (com id usuario), id recado
+    // retorna - recados usuario atualizado OU Erro
+    app.put("", (req : Request, res : Response) => {
 
     });
 };

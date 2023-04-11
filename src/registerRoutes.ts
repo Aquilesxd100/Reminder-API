@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import loginController from "./controllers/loginController";
-import remindersController from "./controllers/remindersController";
+import remindersController from "./controllers/getRemindersController";
 
 function registerRoutes(app : any) {
     // Login 

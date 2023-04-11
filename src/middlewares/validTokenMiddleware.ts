@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { usersList } from "../database/dataBase";
 const jwt = require("jsonwebtoken");
 
 export default function validTokenMiddleware
@@ -8,7 +9,7 @@ export default function validTokenMiddleware
     if(token == null) return res.status(401).send({ message: "Você não tem acesso a essa pagina." });
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (error : any, user : any) => {
         if(error) return res.status(403).send({ message: "Você não tem mais acesso a essa pagina." });
-        req.body.user = user;
+        req.body.loggedUser = usersList.getUserById(user.userId);
     });
     next(); 
 };

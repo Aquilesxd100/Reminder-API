@@ -2,13 +2,12 @@ import crypto from "crypto";
 
 export default class Reminder {
     constructor(
-        private action : string,
-        private date: string,
-        private time: string,
-        private description : string,
-        private id? : string,
-    ){   
-        this.id = !this.id ? crypto.randomUUID() : this.id;    
+        public action : string,
+        public date: string,
+        public time: string,
+        public description : string,
+        public id : string = crypto.randomUUID(),
+    ){      
     }
     getReminderId() {
         return this.id;

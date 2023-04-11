@@ -1,6 +1,8 @@
 import registerRoutes from "./routes";
+require("dotenv").config();
 
 const express = require("express");
+const jwt = require("jsonwebtoken");
 
 const app = express();
 const port = process.env.PORT || 3000;

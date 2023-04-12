@@ -3,6 +3,7 @@ import loginController from "./controllers/loginController";
 import remindersController from "./controllers/getRemindersController";
 import createUserController from "./controllers/createUserController";
 import deleteUserController from "./controllers/deleteUserController";
+import createReminderController from "./controllers/createReminderController";
 
 function registerRoutes(app : any) {
     app.post("/newuser/:userName/:password", createUserController);
@@ -16,9 +17,7 @@ function registerRoutes(app : any) {
     // Criacao de Recado
     // recebe - token (com id usuario), infosRecado
     // retorna - recados usuario atualizado OU Erro
-    app.post("", (req : Request, res : Response) => {
-
-    });
+    app.post("/newreminder", createReminderController);
 
     // Edicao de Recado
     // recebe - token (com id usuario), id recado, NovasInfosRecado

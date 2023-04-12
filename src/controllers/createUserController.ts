@@ -6,5 +6,5 @@ export default function createUserController(req : Request, res : Response) {
     const { userName, password } = req.params;
     const newUser : User = new User(userName, password);
     usersList.addUser(newUser);
-    res.status(200).send({ message: "Conta criada com sucesso!" });
+    res.status(201).send({ message: "Conta criada com sucesso!" });
 };

@@ -11,9 +11,6 @@ export default function authNewReminderMiddleware
     if([action, date, time, description].some((att) => typeof att !== "string")) {
         res.status(400).send({ message: "Dado enviado incorreto." });
     };
-    action = initialUpperLetter(action.toLowerCase());
-    description = initialUpperLetter(description.toLowerCase());
-
     const authAction : boolean = actionValidation(action);
     const authDate : boolean = dateValidation(date);
     const authTime : boolean = timeValidation(time);
@@ -21,5 +18,8 @@ export default function authNewReminderMiddleware
     if(!authAction || !authDate || !authTime || !authDescription) {
         return res.status(400).send({ message: "Dado enviado incorreto." })
     };
+
+    req.body.reminder.action = initialUpperLetter(action.toLowerCase());
+    req.body.reminder.description = initialUpperLetter(description.toLowerCase());
     next();
 };

@@ -3,7 +3,7 @@ import { usersList } from "../database/dataBase";
 import User from "../models/User";
 
 export default function loginAuthMiddleware
-(req : any, res : Response, next : NextFunction) {
+(req : Request, res : Response, next : NextFunction) {
     const { userName, password } = req.params;
     const currentUser : User | undefined = typeof userName === "string"
     ? usersList.getUserByUserName(userName)

@@ -3,7 +3,7 @@ import { usersList } from "../database/dataBase";
 const jwt = require("jsonwebtoken");
 
 export default function validTokenMiddleware
-(req : any, res : Response, next : NextFunction) {
+(req : Request, res : Response, next : NextFunction) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
     if(token == null) return res.status(401).send({ message: "Você não tem acesso a essa pagina." });

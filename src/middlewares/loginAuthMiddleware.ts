@@ -10,7 +10,7 @@ export default function loginAuthMiddleware
     : undefined;
     
     if(!currentUser || currentUser.getPassword() !== password) {
-        return res.status(400).send({ message: "Login ou senha incorreto." });
+        return res.status(400).send({ message: "Login e/ou senha incorreto(s)." });
     };
     req.body.loggedUser = currentUser;
     next();

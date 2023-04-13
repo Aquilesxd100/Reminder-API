@@ -2,15 +2,15 @@ import { Response, Request, NextFunction } from "express";
 
 export default function queriesAuthMiddleware
 (req : Request, res : Response, next : NextFunction) {
-    const { pesquisa, arquivados } = req.query;
-    if (typeof pesquisa !== "string" && typeof pesquisa !== "undefined") {
+    const { search, archived } = req.query;
+    if (typeof search !== "string" && typeof search !== "undefined") {
         return res.status(400).send({
-            mesage: "Tipo de Query de pesquisa inválida."
+            mesage: "Tipo de Query search inválida."
         });            
     };
-    if (arquivados !== "true" && typeof arquivados !== "undefined") {
+    if (archived !== "true" && typeof archived !== "undefined") {
         return res.status(400).send({
-            mesage: "A Query arquivados só pode ser true."
+            mesage: "A Query archived só pode ser true."
         });        
     };
     next();

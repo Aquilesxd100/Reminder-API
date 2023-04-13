@@ -6,8 +6,8 @@ export default function getRemindersController(req : Request, res : Response) {
     const { search, archived } = req.query;
     const loggedUser : User = req.body.loggedUser;
     let userReminders : Array<Reminder> = loggedUser.getReminders();
-    if (archived) {
-        userReminders = userReminders.filter((reminder : Reminder) => reminder.getArchivedStatus());
+    if (!archived) {
+        userReminders = userReminders.filter((reminder : Reminder) => !reminder.getArchivedStatus());
     };
     if (typeof search === "string") {
         const lsSearch : string = search.toLowerCase();

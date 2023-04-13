@@ -38,7 +38,8 @@ export default class User {
             newInfos.date || originalReminder.getDate(),
             newInfos.time || originalReminder.getTime(),
             newInfos.description || originalReminder.getDescription(),
-            originalReminder.getReminderId()
+            originalReminder.getReminderId(),
+            originalReminder.getArchivedStatus()
         );
     };
 };

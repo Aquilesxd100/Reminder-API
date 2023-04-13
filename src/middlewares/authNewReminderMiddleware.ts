@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-import initialUpperLetter from "../helpers/initialUpperLetter";
 import actionValidation from "../helpers/reminderValidations/actionValidation";
 import dateValidation from "../helpers/reminderValidations/dateValidation";
 import timeValidation from "../helpers/reminderValidations/timeValidation";
@@ -19,8 +18,5 @@ export default function authNewReminderMiddleware
     if(authDate !== true) return res.status(400).send({ message: authDate });
     if(authTime !== true) return res.status(400).send({ message: authTime });
     if(authDescription !== true) return res.status(400).send({ message: authDescription });
-
-    req.body.action = initialUpperLetter(action.toLowerCase());
-    req.body.description = initialUpperLetter(description.toLowerCase());
     next();
 };

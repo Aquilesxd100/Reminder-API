@@ -8,7 +8,7 @@ export default function userValidation(userName : string):string | boolean {
     if(dataBaseUsers.some((user : User) => user.getUserName() === userName)) {
         validation = "Esse login já existe.";
     };
-    if (userName.length < 4) { validation = "Precisa ter ao menos 4 dígitos." };
-    if (userName.length > 10) { validation = "Pode ter no máximo 10 dígitos." };
+    if (userName.length < 4) { validation = "O login precisa ter ao menos 4 dígitos." };
+    if (userName.length > 10) { validation = "O login pode ter no máximo 10 dígitos." };
     return validation;
 };

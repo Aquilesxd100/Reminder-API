@@ -13,7 +13,7 @@ function registerRoutes(app : Application) {
     app.post("/newuser/:userName/:password", createUserController);
     app.delete("/deleteuser", deleteUserController);
     app.get("/login/:userName/:password", loginController);
-    app.get("/userName", getUserNameController);
+    app.get("/username", getUserNameController);
 
     app.post("/newreminder", createReminderController);
     app.put("/updatereminder/:reminderId", updateReminderController);

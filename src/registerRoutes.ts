@@ -16,14 +16,6 @@ function registerRoutes(app : Application) {
     app.put("/updatereminder:reminderId", updateReminderController);
     app.delete("/deletereminder:reminderId", deleteReminderController);
     app.get("/reminders", remindersController);
-    
-
-    // Edicao de Recado
-    // recebe - token (com id usuario), id recado, NovasInfosRecado
-    // retorna - recados usuario atualizado OU Erro
-    app.put("", (req : Request, res : Response) => {
-
-    });
 
     // Arquivar/Desarquivar Recado
     // recebe - token (com id usuario), id recado

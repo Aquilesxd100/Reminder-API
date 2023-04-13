@@ -1,3 +1,4 @@
+import { Application } from "express";
 import registerMiddlewares from "./registerMiddlewares";
 import registerRoutes from "./registerRoutes";
 require("dotenv").config();
@@ -5,7 +6,7 @@ require("dotenv").config();
 const express = require("express");
 const jwt = require("jsonwebtoken");
 
-const app = express();
+const app : Application = express();
 const port = process.env.PORT || 3000;
 app.use(express.json());
 

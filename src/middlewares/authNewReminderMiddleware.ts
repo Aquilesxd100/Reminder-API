@@ -7,7 +7,7 @@ import descriptionValidation from "../helpers/reminderValidations/descriptionVal
 
 export default function authNewReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {
-    let { action, date, time, description } = req.body.reminder;
+    let { action, date, time, description } = req.body;
     if([action, date, time, description].some((att) => typeof att !== "string")) {
         res.status(400).send({ message: "Tipo de um ou mais dados incorreto." });
     };

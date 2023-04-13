@@ -1,23 +1,22 @@
-import { Request, Response } from "express";
+import { Request, Response, Application } from "express";
 import loginController from "./controllers/loginController";
 import remindersController from "./controllers/getRemindersController";
 import createUserController from "./controllers/createUserController";
 import deleteUserController from "./controllers/deleteUserController";
 import createReminderController from "./controllers/createReminderController";
 import deleteReminderController from "./controllers/deleteReminderController";
+import updateReminderController from "./controllers/updateReminderController";
 
-function registerRoutes(app : any) {
+function registerRoutes(app : Application) {
     app.post("/newuser/:userName/:password", createUserController);
-
     app.delete("/deleteuser", deleteUserController);
-
     app.get("/login/:userName/:password", loginController);
 
     app.post("/newreminder", createReminderController);
-
+    app.put("/updatereminder:reminderId", updateReminderController);
     app.delete("/deletereminder:reminderId", deleteReminderController);
-
     app.get("/reminders", remindersController);
+    
 
     // Edicao de Recado
     // recebe - token (com id usuario), id recado, NovasInfosRecado

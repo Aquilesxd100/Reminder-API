@@ -10,6 +10,7 @@ export default function validTokenMiddleware
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (error : any, user : any) => {
         if(error) return res.status(403).send({ message: "Você não tem mais acesso a essa pagina." });
         req.body.loggedUser = usersList.getUserById(user.userId);
+        if(!req.body.loggedUser) return res.status(403).send({ message: "Você não tem mais acesso a essa pagina." })
     });
     next(); 
 };

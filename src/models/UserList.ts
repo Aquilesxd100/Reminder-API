@@ -8,8 +8,7 @@ export default class UserList {
     addUser(newUser : User) {
         this.userList.push(newUser);
     };
-    deleteUserById(userId : string) {
-        const userIndex : number = this.userList.findIndex((user : User) => user.getUserId() === userId);
+    deleteUser(userIndex: number) {
         this.userList.splice(userIndex, 1);
     };
     getUserByUserName(userName : string) : User | undefined {

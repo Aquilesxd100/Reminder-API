@@ -13,6 +13,8 @@ export default function registerMiddlewares(app : any) {
 
     app.post("/newreminder", [validTokenMiddleware, authNewReminderMiddleware]);
 
+    app.delete("/deletereminder:reminderId", validTokenMiddleware);
+
     app.get("/reminders", validTokenMiddleware);
 
 };

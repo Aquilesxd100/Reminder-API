@@ -1,12 +1,13 @@
 import crypto from "crypto";
 
 export default class Reminder {
+    private archived : boolean = false;
     constructor(
-        public action : string,
-        public date: string,
-        public time: string,
-        public description : string,
-        public id : string = crypto.randomUUID(),
+        private action : string,
+        private date: string,
+        private time: string,
+        private description : string,
+        private id : string = crypto.randomUUID(),
     ){      
     }
     getReminderId() {
@@ -23,5 +24,8 @@ export default class Reminder {
     };
     getDescription() {
         return this.description;
+    };
+    changeArchivedStatus() {
+        this.archived = this.archived ? false : true;
     };
 };

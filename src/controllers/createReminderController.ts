@@ -6,10 +6,10 @@ import initialUpperLetter from "../helpers/initialUpperLetter";
 export default function createReminderController(req : Request, res : Response) {
     const loggedUser : User = req.body.loggedUser;
     const newReminder : Reminder = new Reminder(
-        initialUpperLetter(req.body.reminder.action.toLowerCase()),
-        req.body.reminder.date,
-        req.body.reminder.time,
-        initialUpperLetter(req.body.reminder.description.toLowerCase())
+        initialUpperLetter(req.body.action.toLowerCase()),
+        req.body.date,
+        req.body.time,
+        initialUpperLetter(req.body.description.toLowerCase())
     );
     loggedUser.newReminder(newReminder);
     res.status(201).send({ message: "Recado criado com sucesso!" })

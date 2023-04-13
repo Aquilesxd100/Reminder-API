@@ -6,6 +6,7 @@ import deleteUserController from "./controllers/deleteUserController";
 import createReminderController from "./controllers/createReminderController";
 import deleteReminderController from "./controllers/deleteReminderController";
 import updateReminderController from "./controllers/updateReminderController";
+import archiveReminderController from "./controllers/archiveReminderController";
 
 function registerRoutes(app : Application) {
     app.post("/newuser/:userName/:password", createUserController);
@@ -14,14 +15,8 @@ function registerRoutes(app : Application) {
 
     app.post("/newreminder", createReminderController);
     app.put("/updatereminder/:reminderId", updateReminderController);
+    app.put("/archivereminder/:reminderId", archiveReminderController);
     app.delete("/deletereminder/:reminderId", deleteReminderController);
     app.get("/reminders", remindersController);
-
-    // Arquivar/Desarquivar Recado
-    // recebe - token (com id usuario), id recado
-    // retorna - recados usuario atualizado OU Erro
-    app.put("", (req : Request, res : Response) => {
-
-    });
 };
 export default registerRoutes;

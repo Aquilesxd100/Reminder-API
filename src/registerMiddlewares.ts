@@ -14,6 +14,7 @@ export default function registerMiddlewares(app : Application) {
 
     app.post("/newreminder", [validTokenMiddleware, authNewReminderMiddleware]);
     app.put("/updatereminder/:reminderId", [validTokenMiddleware, authUpdateReminderMiddleware]);
+    app.put("/archivereminder/:reminderId", validTokenMiddleware);
     app.delete("/deletereminder/:reminderId", validTokenMiddleware);
     app.get("/reminders", validTokenMiddleware, queriesAuthMiddleware);
 

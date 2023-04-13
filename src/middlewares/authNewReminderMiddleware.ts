@@ -20,7 +20,7 @@ export default function authNewReminderMiddleware
     if(authTime !== true) return res.status(400).send({ message: authTime });
     if(authDescription !== true) return res.status(400).send({ message: authDescription });
 
-    req.body.reminder.action = initialUpperLetter(action.toLowerCase());
-    req.body.reminder.description = initialUpperLetter(description.toLowerCase());
+    req.body.action = initialUpperLetter(action.toLowerCase());
+    req.body.description = initialUpperLetter(description.toLowerCase());
     next();
 };

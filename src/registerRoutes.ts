@@ -13,8 +13,8 @@ function registerRoutes(app : Application) {
     app.get("/login/:userName/:password", loginController);
 
     app.post("/newreminder", createReminderController);
-    app.put("/updatereminder:reminderId", updateReminderController);
-    app.delete("/deletereminder:reminderId", deleteReminderController);
+    app.put("/updatereminder/:reminderId", updateReminderController);
+    app.delete("/deletereminder/:reminderId", deleteReminderController);
     app.get("/reminders", remindersController);
 
     // Arquivar/Desarquivar Recado

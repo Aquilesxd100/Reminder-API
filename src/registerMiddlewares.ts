@@ -10,6 +10,7 @@ import queriesAuthMiddleware from "./middlewares/queriesAuthMiddleware";
 export default function registerMiddlewares(app : Application) {
     app.post("/newuser/:userName/:password", signUpAuthMiddleware);
     app.get("/login/:userName/:password", [loginAuthMiddleware, generateNewTokenMiddleware]);
+    app.get("/userName", validTokenMiddleware);
     app.delete("/deleteuser", validTokenMiddleware);
 
     app.post("/newreminder", [validTokenMiddleware, authNewReminderMiddleware]);

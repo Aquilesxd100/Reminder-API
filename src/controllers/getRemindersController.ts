@@ -10,11 +10,12 @@ export default function getRemindersController(req : Request, res : Response) {
         userReminders = userReminders.filter((reminder : Reminder) => reminder.getArchivedStatus());
     };
     if (typeof search === "string") {
+        const lsSearch : string = search.toLowerCase();
         userReminders = userReminders.filter((reminder : Reminder) => {
-            if (reminder.getAction().indexOf(search) !== -1) {
+            if (reminder.getAction().toLowerCase().indexOf(lsSearch) !== -1) {
                 return reminder;
             }
-            else if (reminder.getDescription().indexOf(search) !== -1) {
+            else if (reminder.getDescription().toLowerCase().indexOf(lsSearch) !== -1) {
                 return reminder;
             };
         });

@@ -36,7 +36,7 @@ export default function authUpdateReminderMiddleware
     if(authTime !== true) return res.status(400).send({ message: authTime });
     if(authDescription !== true) return res.status(400).send({ message: authDescription });
     req.body.updatedReminder = {
-        reminderIndex: 1,
+        reminderIndex: indexReminder,
         reminder: {
             action : action,
             date : date,

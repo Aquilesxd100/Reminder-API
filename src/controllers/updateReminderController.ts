@@ -14,4 +14,5 @@ export default function updateReminderController(req : Request, res : Response) 
         updateReminder.description = initialUpperLetter(updateReminder.description.toLowerCase());
     };
     loggedUser.editReminder(updateReminderIndex, updateReminder);
+    res.status(200).send({ message: "Recado atualizado com sucesso." });
 };

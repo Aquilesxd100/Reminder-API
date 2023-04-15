@@ -5,12 +5,12 @@ export default function queriesAuthMiddleware
     const { search, archived } = req.query;
     if (typeof search !== "string" && typeof search !== "undefined") {
         return res.status(400).send({
-            mesage: "Tipo de Query search inválida."
+            message: "Tipo de Query search inválida."
         });            
     };
     if (archived !== "true" && typeof archived !== "undefined") {
         return res.status(400).send({
-            mesage: "A Query archived só pode ser true."
+            message: "A Query archived só pode ser true."
         });        
     };
     next();

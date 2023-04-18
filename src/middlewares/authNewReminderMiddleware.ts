@@ -8,7 +8,7 @@ export default function authNewReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {
     let { action, date, time, description } = req.body;
     if([action, date, time, description].some((att) => typeof att !== "string")) {
-        res.status(400).send({ message: "Tipo de um ou mais dados incorreto." });
+        return res.status(400).send({ message: "Tipo de um ou mais dados incorreto." });
     };
     const authAction : boolean | string = actionValidation(action);
     const authDate : boolean | string = dateValidation(date);

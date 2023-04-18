@@ -5,5 +5,5 @@ export default function deleteReminderController(req : Request, res : Response) 
     const loggedUser : User = req.body.loggedUser;
     const reminderIndex : number = req.body.reminderIndex;
     loggedUser.deleteReminder(reminderIndex);
-    res.status(200).send({ message: "Recado excluído com sucesso!" });
+    return res.status(200).send({ message: "Recado excluído com sucesso!" });
 };

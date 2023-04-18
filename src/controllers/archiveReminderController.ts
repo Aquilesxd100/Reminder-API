@@ -6,7 +6,7 @@ export default function archiveReminderController(req : Request, res : Response)
     const reminderIndex : number = req.body.reminderIndex;
     loggedUser.getReminder(reminderIndex).changeArchivedStatus();
     if(loggedUser.getReminder(reminderIndex).getArchivedStatus()) {
-        res.status(200).send({ message: "Recado arquivado com sucesso!" });
+        return res.status(200).send({ message: "Recado arquivado com sucesso!" });
     };
-    res.status(200).send({ message: "Recado desarquivado com sucesso!" });
+    return res.status(200).send({ message: "Recado desarquivado com sucesso!" });
 };

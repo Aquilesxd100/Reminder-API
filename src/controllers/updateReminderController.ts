@@ -7,5 +7,5 @@ export default function updateReminderController(req : Request, res : Response) 
     const reminderIndex : number = req.body.reminderIndex;
     const updateReminder : ReminderEditType = req.body.updatedReminder;
     loggedUser.editReminder(reminderIndex, updateReminder);
-    res.status(200).send({ message: "Recado atualizado com sucesso." });
+    return res.status(200).send({ message: "Recado atualizado com sucesso." });
 };

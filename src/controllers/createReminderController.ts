@@ -12,6 +12,6 @@ export default function createReminderController(req : Request, res : Response) 
         initialUpperLetter(req.body.description.toLowerCase())
     );
     loggedUser.newReminder(newReminder);
-    res.status(201).send({ message: "Recado criado com sucesso!" })
+    return res.status(201).send({ message: "Recado criado com sucesso!" })
 };
 

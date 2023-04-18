@@ -6,6 +6,7 @@ import signUpAuthMiddleware from "./middlewares/signUpAuthMiddleware";
 import validTokenMiddleware from "./middlewares/validTokenMiddleware";
 import authUpdateReminderMiddleware from "./middlewares/authUpdateReminderMiddleware";
 import queriesAuthMiddleware from "./middlewares/queriesAuthMiddleware";
+import validReminderIdMiddleware from "./middlewares/validReminderIdMiddleware";
 
 export default function registerMiddlewares(app : Application) {
     app.post("/newuser/:userName/:password", signUpAuthMiddleware);
@@ -14,8 +15,8 @@ export default function registerMiddlewares(app : Application) {
     app.delete("/deleteuser", validTokenMiddleware);
 
     app.post("/newreminder", [validTokenMiddleware, authNewReminderMiddleware]);
-    app.put("/updatereminder/:reminderId", [validTokenMiddleware, authUpdateReminderMiddleware]);
-    app.put("/archivereminder/:reminderId", validTokenMiddleware);
-    app.delete("/deletereminder/:reminderId", validTokenMiddleware);
+    app.put("/updatereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware, authUpdateReminderMiddleware]);
+    app.put("/archivereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware]);
+    app.delete("/deletereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware]);
     app.get("/reminders", validTokenMiddleware, queriesAuthMiddleware);
 };

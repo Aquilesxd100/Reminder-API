@@ -1,24 +1,14 @@
 import { Response, Request, NextFunction } from "express";
-import User from "../models/User";
-import Reminder from "../models/Reminder";
 import actionValidation from "../helpers/reminderValidations/actionValidation";
 import dateValidation from "../helpers/reminderValidations/dateValidation";
 import timeValidation from "../helpers/reminderValidations/timeValidation";
 import descriptionValidation from "../helpers/reminderValidations/descriptionValidation";
+import initialUpperLetter from "../helpers/initialUpperLetter";
 
 export default function authUpdateReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {
     const { action, date, time, description } = req.body;
-    const reminderId : string | undefined = req.params.reminderId;
-    const loggedUser : User = req.body.loggedUser;
     const arrayAttributes : Array<any> = [action, date, time, description].filter((attribute) => attribute);
-    if (typeof reminderId !== "string") return res.status(400).send({
-        message: "Tipo do ID do recado inválido."
-    });
-    const indexReminder : number = loggedUser.getReminders().findIndex((reminder : Reminder) => reminder.getReminderId() === reminderId);
-    if(indexReminder === -1) return res.status(404).send({
-        message: "Não foi encontrado nenhum recado com esse ID."
-    });
     if (!arrayAttributes.length) { 
         return res.status(400).send({ message: "Informe ao menos um atributo do recado para atualizar." });
     };
@@ -35,14 +25,18 @@ export default function authUpdateReminderMiddleware
     if(authDate !== true) return res.status(400).send({ message: authDate });
     if(authTime !== true) return res.status(400).send({ message: authTime });
     if(authDescription !== true) return res.status(400).send({ message: authDescription });
-    req.body.updatedReminder = {
-        reminderIndex: indexReminder,
-        reminder: {
-            action : action,
-            date : date,
-            time : time,
-            description : description
-        }
+    const updateReminder = {
+        action : action,
+        date : date,
+        time : time,
+        description : description
     };
+    if(updateReminder.action) {
+        updateReminder.action = initialUpperLetter(updateReminder.action.toLowerCase());
+    };
+    if(updateReminder.description) {
+        updateReminder.description = initialUpperLetter(updateReminder.description.toLowerCase());
+    };
+    req.body.updatedReminder = updateReminder;
     next();
 };

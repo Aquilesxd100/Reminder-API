@@ -1,5 +1,5 @@
 import express, { Application } from "express";
-import "dotenv/config";
+require('dotenv').config({ path: './env/.env' });
 import registerMiddlewares from "./registerMiddlewares";
 import registerRoutes from "./registerRoutes";
 
@@ -14,6 +14,8 @@ app.use(cors({
 
 registerMiddlewares(app);
 registerRoutes(app);
+
+
 app.listen(
     port, () => console.log(`Aplicacao ativa escutando a porta ${port}.`)
 );

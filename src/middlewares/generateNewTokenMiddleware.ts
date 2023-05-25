@@ -1,5 +1,4 @@
 import { Response, Request, NextFunction } from "express";
-require('dotenv').config({ path: '../env/.env' });
 const jwt = require("jsonwebtoken");
 
 export default function generateNewTokenMiddleware

@@ -1,9 +1,10 @@
-import { DataSourceOptions } from "typeorm";
 require('dotenv').config({ path: './../env' })
+import { DataSourceOptions } from "typeorm";
 import { UsersEntity } from "../app/shared/entities/usersEntity";
 import { RemindersEntity } from "../app/shared/entities/remindersEntity";
-//
-//
+import { UsersAPITable } from "./migrations/UsersAPITable";
+import { RemindersAPITable } from "./migrations/RemindersAPITable";
+
 const config : DataSourceOptions = {
     type: "postgres",
     url: process.env.DATABASE_URL,
@@ -13,6 +14,6 @@ const config : DataSourceOptions = {
         rejectUnauthorized: false,
     },
     entities: [UsersEntity, RemindersEntity],
-    //migrations: [UserAPITables, ReminderAPITables]
+    migrations: [UsersAPITable, RemindersAPITable]
 };
 export default config;

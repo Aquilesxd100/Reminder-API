@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import { usersList } from "../database/dataBase";
-require('dotenv').config({ path: '../env/.env' });
 const jwt = require("jsonwebtoken");
 
 export default function validTokenMiddleware
 (req : Request, res : Response, next : NextFunction) {
+    console.log(process.env.ACCESS_TOKEN_SECRET)
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
     let jwtCheck : boolean = true;

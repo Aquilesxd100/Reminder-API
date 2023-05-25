@@ -1,7 +1,7 @@
 import { DataSourceOptions } from "typeorm";
 require('dotenv').config({ path: './../env' })
-// import { UserEntity } from "./../models/UserEntity";
-// import { ReminderEntity } from "./../models/ReminderEntity";
+import { UsersEntity } from "../app/shared/entities/usersEntity";
+import { RemindersEntity } from "../app/shared/entities/remindersEntity";
 //
 //
 
@@ -13,7 +13,7 @@ const config : DataSourceOptions = {
     ssl: {
         rejectUnauthorized: false,
     },
-    //entities: [UserEntity, ReminderEntity],
+    entities: [UsersEntity, RemindersEntity],
     //migrations: [UserAPITables, ReminderAPITables]
 };
 export default config;

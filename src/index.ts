@@ -17,14 +17,13 @@ app.use(cors({
         app.listen(port, () =>
             console.log(`Aplicacao ativa escutando a porta ${port}.`)
         )
-    }).catch((err) => console.log(err));
- */
+    }).catch((err) => console.log(err)); */
+
+    app.listen(
+        port, () => console.log(`Aplicacao ativa escutando a porta ${port}.`)
+    );
+    
+
 registerMiddlewares(app);
 registerRoutes(app);
-
-
-app.listen(
-    port, () => console.log(`Aplicacao ativa escutando a porta ${port}.`)
-);
-
 

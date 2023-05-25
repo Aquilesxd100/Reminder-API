@@ -12,20 +12,19 @@ app.use(cors({
     origin: "*",
     methods: ["PUT", "DELETE"]
 }));
-
-pgHelper.connect()
+/* pgHelper.connect()
     .then(() => {
-        app.listen(process.env.PORT || 4000, () =>
+        app.listen(port, () =>
             console.log(`Aplicacao ativa escutando a porta ${port}.`)
         )
     }).catch((err) => console.log(err));
-
+ */
 registerMiddlewares(app);
 registerRoutes(app);
 
 
-/* app.listen(
+app.listen(
     port, () => console.log(`Aplicacao ativa escutando a porta ${port}.`)
-); */
+);
 
 

@@ -4,7 +4,6 @@ import { UsersEntity } from "../app/shared/entities/usersEntity";
 import { RemindersEntity } from "../app/shared/entities/remindersEntity";
 //
 //
-
 const config : DataSourceOptions = {
     type: "postgres",
     url: process.env.DATABASE_URL,

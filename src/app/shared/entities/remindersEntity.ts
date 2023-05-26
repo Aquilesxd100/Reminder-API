@@ -1,5 +1,5 @@
 import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
-import { UsersEntity } from "./usersEntity";
+import { UsersEntity } from "./UsersEntity";
 
 @Entity({ name: 'reminders' })
 export class RemindersEntity extends BaseEntity {

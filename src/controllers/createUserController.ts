@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
-import { usersList } from "../database/dataBase";
-import User from "../models/User";
+import { UsersEntity } from "../app/shared/entities/UsersEntity";
 
-export default function createUserController(req : Request, res : Response) {
+export default async function createUserController(req : Request, res : Response) {
     const { userName, password } = req.params;
-    const newUser : User = new User(userName, password);
-    usersList.addUser(newUser);
+    const newUser : UsersEntity = new UsersEntity();
+    newUser.username = userName;
+    newUser.password = password;
+    await newUser.save();
     return res.status(201).send({ message: "Conta criada com sucesso!" });
 };

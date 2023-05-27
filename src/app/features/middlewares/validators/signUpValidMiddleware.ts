@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import userValidationCreation from "../helpers/newAccountValidation/userValidationCreation";
-import passwordValidationCreation from "../helpers/newAccountValidation/passwordValidationCreation";
+import userValidationCreation from "../../validators/newAccountValidation/userValidationCreation";
+import passwordValidationCreation from "../../validators/newAccountValidation/passwordValidationCreation";
 
-export default async function signUpAuthMiddleware
+export default async function signUpValidMiddleware
 (req : Request, res : Response, next : NextFunction) {  
     let { userName, password } = req.params;
     if (typeof userName !== "string" || typeof password !== "string") {

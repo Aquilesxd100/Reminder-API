@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { dataSource } from "./typeorm";
+import { dataSource } from "../../../main/database/typeorm";
 
 
 export const pgHelper = {

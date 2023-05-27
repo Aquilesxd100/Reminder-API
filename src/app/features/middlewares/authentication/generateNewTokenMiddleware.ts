@@ -1,5 +1,5 @@
 import { Response, Request, NextFunction } from "express";
-import { authEnv } from "../env/env";
+import { authEnv } from "../../../envs/env";
 import jwt from "jsonwebtoken";
 
 export default function generateNewTokenMiddleware

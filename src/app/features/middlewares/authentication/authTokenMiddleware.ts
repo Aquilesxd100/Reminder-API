@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from "express";
-import { UsersEntity } from "../app/shared/entities/usersEntity";
-import { authEnv } from "../env/env";
-import User from "../models/User";
+import { UsersEntity } from "../../../shared/entities/usersEntity";
+import { authEnv } from "../../../envs/env";
+import User from "../../../models/User";
 const jwt = require("jsonwebtoken");
 
-export default async function validTokenMiddleware
+export default async function authTokenMiddleware
 (req : Request, res : Response, next : NextFunction) {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];

@@ -1,6 +1,6 @@
 import { Response, Request, NextFunction } from "express";
 
-export default function queriesAuthMiddleware
+export default function validQueriesMiddleware
 (req : Request, res : Response, next : NextFunction) {
     const { search, archived } = req.query;
     if (typeof search !== "string" && typeof search !== "undefined") {

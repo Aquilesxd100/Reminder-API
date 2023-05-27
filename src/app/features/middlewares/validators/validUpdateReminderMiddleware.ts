@@ -1,11 +1,11 @@
 import { Response, Request, NextFunction } from "express";
-import actionValidation from "../helpers/reminderValidations/actionValidation";
-import dateValidation from "../helpers/reminderValidations/dateValidation";
-import timeValidation from "../helpers/reminderValidations/timeValidation";
-import descriptionValidation from "../helpers/reminderValidations/descriptionValidation";
-import initialUpperLetter from "../helpers/initialUpperLetter";
+import actionValidation from "../../validators/reminderValidations/actionValidation";
+import dateValidation from "../../validators/reminderValidations/dateValidation";
+import timeValidation from "../../validators/reminderValidations/timeValidation";
+import descriptionValidation from "../../validators/reminderValidations/descriptionValidation";
+import initialUpperLetter from "../../../shared/helpers/initialUpperLetter";
 
-export default function authUpdateReminderMiddleware
+export default function validUpdateReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {
     const { action, date, time, description } = req.body;
     const arrayAttributes : Array<any> = [action, date, time, description].filter((attribute) => attribute);

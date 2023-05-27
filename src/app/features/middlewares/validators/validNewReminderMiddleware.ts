@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from "express";
-import actionValidation from "../helpers/reminderValidations/actionValidation";
-import dateValidation from "../helpers/reminderValidations/dateValidation";
-import timeValidation from "../helpers/reminderValidations/timeValidation";
-import descriptionValidation from "../helpers/reminderValidations/descriptionValidation";
+import actionValidation from "../../validators/reminderValidations/actionValidation";
+import dateValidation from "../../validators/reminderValidations/dateValidation";
+import timeValidation from "../../validators/reminderValidations/timeValidation";
+import descriptionValidation from "../../validators/reminderValidations/descriptionValidation";
 
-export default function authNewReminderMiddleware
+export default function validNewReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {
     let { action, date, time, description } = req.body;
     if([action, date, time, description].some((att) => typeof att !== "string")) {

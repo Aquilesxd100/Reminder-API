@@ -1,8 +1,8 @@
 import express, { Application } from "express";
-import registerMiddlewares from "./registerMiddlewares";
-import registerRoutes from "./registerRoutes";
-import { pgHelper } from "./orm/pg-helper";
-import { apiEnv } from "./env/env";
+import registerMiddlewares from "../main/server/routes/registerMiddlewares";
+import registerRoutes from "../main/server/routes/registerRoutes";
+import { pgHelper } from "../app/shared/helpers/pg-helper";
+import { apiEnv } from "./envs/env";
 
 const app : Application = express();
 const cors = require("cors");

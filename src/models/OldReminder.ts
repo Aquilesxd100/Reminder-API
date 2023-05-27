@@ -1,17 +1,14 @@
+import crypto from "crypto";
+
 export default class Reminder {
-    private action : string;
-    private date: string;
-    private time: string;
-    private description : string;
-    private id : string;
-    private archived : boolean;
-    constructor(reminderDB: any){     
-        this.action = reminderDB.action;
-        this.date = reminderDB.date;
-        this.time = reminderDB.time;
-        this.description = reminderDB.description;
-        this.id = reminderDB.id;
-        this.archived = reminderDB.archived;
+    constructor(
+        private action : string,
+        private date: string,
+        private time: string,
+        private description : string,
+        private id : string = crypto.randomUUID(),
+        private archived : boolean = false
+    ){      
     }
     getReminderId() {
         return this.id;

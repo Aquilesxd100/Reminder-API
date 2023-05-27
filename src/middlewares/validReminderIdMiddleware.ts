@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../models/OldUser";
-import Reminder from "../models/Reminder";
+import Reminder from "../models/OldReminder";
 
 export default function validReminderIdMiddleware
 (req : Request, res : Response, next : NextFunction) {

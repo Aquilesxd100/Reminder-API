@@ -1,5 +1,5 @@
 import { ReminderEditType } from "../types/types";
-import Reminder from "./Reminder";
+import Reminder from "./OldReminder";
 
 export default class User {
     private userName: string

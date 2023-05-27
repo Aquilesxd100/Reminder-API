@@ -1,6 +1,6 @@
 import { ReminderEditType } from "../types/types";
 import crypto from "crypto";
-import Reminder from "./Reminder";
+import Reminder from "./OldReminder";
 
 export default class User {
     private id: string = crypto.randomUUID();

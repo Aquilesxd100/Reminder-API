@@ -14,6 +14,5 @@ export default async function loginAuthMiddleware
         return res.status(400).send({ message: "Login e/ou senha incorreto(s)." });
     };
     req.body.loggedUser = new User(currentUser);
-    console.log(req.body.loggedUser)
     next();
 };

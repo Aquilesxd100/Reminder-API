@@ -48,6 +48,7 @@ export class RemindersAPITable1685060638579 implements MigrationInterface {
                         name: 'updated_at',
                         type: 'timestamp',
                         default: 'null',
+                        isNullable: true
                     }),
                     new TableColumn({
                         name: 'user_id',

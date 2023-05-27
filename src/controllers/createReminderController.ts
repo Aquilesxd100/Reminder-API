@@ -1,17 +1,19 @@
 import { Response, Request } from "express";
 import User from "../models/OldUser";
-import Reminder from "../models/Reminder";
+import Reminder from "../models/OldReminder";
 import initialUpperLetter from "../helpers/initialUpperLetter";
+import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
 
-export default function createReminderController(req : Request, res : Response) {
+export default async function createReminderController(req : Request, res : Response) {
     const loggedUser : User = req.body.loggedUser;
-    const newReminder : Reminder = new Reminder(
-        initialUpperLetter(req.body.action.toLowerCase()),
-        req.body.date,
-        req.body.time,
-        initialUpperLetter(req.body.description.toLowerCase())
-    );
-    loggedUser.newReminder(newReminder);
+    const newReminder : RemindersEntity = new RemindersEntity;
+    newReminder.action = initialUpperLetter(req.body.action.toLowerCase());
+    newReminder.date = req.body.date;
+    newReminder.time = req.body.time;
+    newReminder.description = initialUpperLetter(req.body.description.toLowerCase());
+    newReminder.user_id = loggedUser.getUserId();
+    await newReminder.save();
+    console.log(await RemindersEntity.find());
     return res.status(201).send({ message: "Recado criado com sucesso!" })
 };
 

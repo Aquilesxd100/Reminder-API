@@ -1,11 +1,17 @@
 import { Request, Response } from "express";
-import Reminder from "../models/OldReminder";
+import Reminder from "../models/Reminder";
 import User from "../models/OldUser";
+import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
 
-export default function getRemindersController(req : Request, res : Response) {
+export default async function getRemindersController(req : Request, res : Response) {
     const { search, archived } = req.query;
     const loggedUser : User = req.body.loggedUser;
-    let userReminders : Array<Reminder> = loggedUser.getReminders();
+    const userRemindersDB : Array<RemindersEntity> = await RemindersEntity.find(
+        { where: { user_id: loggedUser.getUserId() }
+    });
+    let userReminders : Array<Reminder> = userRemindersDB.map((reminderDB) => {
+        return new Reminder(reminderDB);
+    });
     if (!archived) {
         userReminders = userReminders.filter((reminder : Reminder) => !reminder.getArchivedStatus());
     };

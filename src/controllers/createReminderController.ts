@@ -13,7 +13,6 @@ export default async function createReminderController(req : Request, res : Resp
     newReminder.description = initialUpperLetter(req.body.description.toLowerCase());
     newReminder.user_id = loggedUser.getUserId();
     await newReminder.save();
-    console.log(await RemindersEntity.find());
     return res.status(201).send({ message: "Recado criado com sucesso!" })
 };
 

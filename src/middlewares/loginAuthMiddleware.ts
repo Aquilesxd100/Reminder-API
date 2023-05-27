@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-import { usersList } from "../database/dataBase";
 import User from "../models/User";
 import { UsersEntity } from "../app/shared/entities/UsersEntity";
 

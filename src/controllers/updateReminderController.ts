@@ -1,11 +1,14 @@
 import { Response, Request } from "express";
-import User from "../models/OldUser";
 import { ReminderEditType } from "../types/types";
+import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
 
-export default function updateReminderController(req : Request, res : Response) {
-    const loggedUser : User = req.body.loggedUser;
-    const reminderIndex : number = req.body.reminderIndex;
+export default async function updateReminderController(req : Request, res : Response) {
+    const reminder : RemindersEntity = req.body.reminderEntity;
     const updateReminder : ReminderEditType = req.body.updatedReminder;
-    loggedUser.editReminder(reminderIndex, updateReminder);
+    reminder.action = updateReminder.action ? updateReminder.action : reminder.action;
+    reminder.date = updateReminder.date ? updateReminder.date : reminder.date;
+    reminder.time = updateReminder.time ? updateReminder.time : reminder.time;
+    reminder.description = updateReminder.description ? updateReminder.description : reminder.description;
+    await reminder.save();
     return res.status(200).send({ message: "Recado atualizado com sucesso." });
 };

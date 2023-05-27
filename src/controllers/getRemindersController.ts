@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import Reminder from "../models/Reminder";
-import User from "../models/OldUser";
+import User from "../models/User";
 import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
 
 export default async function getRemindersController(req : Request, res : Response) {

@@ -1,10 +1,9 @@
-import Reminder from "./OldReminder";
 
 export default class User {
     private userName: string
     private password: string
     private id: string
-    constructor(userDB : any, reminders? : Array<Reminder>){
+    constructor(userDB : any){
         this.userName = userDB.username;
         this.password = userDB.password;
         this.id = userDB.id;

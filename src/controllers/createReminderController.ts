@@ -1,6 +1,5 @@
 import { Response, Request } from "express";
-import User from "../models/OldUser";
-import Reminder from "../models/OldReminder";
+import User from "../models/User";
 import initialUpperLetter from "../helpers/initialUpperLetter";
 import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
 

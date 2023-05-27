@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import User from "../models/User";
+import User from "../models/OldUser";
 import Reminder from "../models/Reminder";
 
 export default function validReminderIdMiddleware

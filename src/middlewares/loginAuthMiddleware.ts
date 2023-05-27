@@ -1,17 +1,19 @@
 import { Request, Response, NextFunction } from "express";
 import { usersList } from "../database/dataBase";
 import User from "../models/User";
+import { UsersEntity } from "../app/shared/entities/UsersEntity";
 
-export default function loginAuthMiddleware
+export default async function loginAuthMiddleware
 (req : Request, res : Response, next : NextFunction) {
     const { userName, password } = req.params;
-    const currentUser : User | undefined = typeof userName === "string"
-    ? usersList.getUserByUserName(userName)
-    : undefined;
-    
-    if(!currentUser || currentUser.getPassword() !== password) {
+    if(typeof userName !== 'string' || typeof password !== 'string') {
+        return res.status(400).send({ message: "Tipo de login e/ou senha invalido(s)." });
+    };
+    const currentUser : any = await UsersEntity.findOne({ where: { username: userName } })
+    if(!currentUser || currentUser.password !== password) {
         return res.status(400).send({ message: "Login e/ou senha incorreto(s)." });
     };
-    req.body.loggedUser = currentUser;
+    req.body.loggedUser = new User(currentUser);
+    console.log(req.body.loggedUser)
     next();
 };

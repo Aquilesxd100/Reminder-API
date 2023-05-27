@@ -1,4 +1,4 @@
-import User from "./User";
+import User from "./OldUser";
 
 export default class UserList {
     private userList : Array<User> = []

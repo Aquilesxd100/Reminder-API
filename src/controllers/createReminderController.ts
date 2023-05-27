@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import User from "../models/User";
+import User from "../models/OldUser";
 import Reminder from "../models/Reminder";
 import initialUpperLetter from "../helpers/initialUpperLetter";
 

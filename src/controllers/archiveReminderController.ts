@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import User from "../models/User";
+import User from "../models/OldUser";
 
 export default function archiveReminderController(req : Request, res : Response) {
     const loggedUser : User = req.body.loggedUser;

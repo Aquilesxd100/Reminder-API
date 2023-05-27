@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import Reminder from "../models/Reminder";
-import User from "../models/User";
+import User from "../models/OldUser";
 
 export default function getRemindersController(req : Request, res : Response) {
     const { search, archived } = req.query;

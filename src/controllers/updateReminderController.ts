@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import User from "../models/User";
+import User from "../models/OldUser";
 import { ReminderEditType } from "../types/types";
 
 export default function updateReminderController(req : Request, res : Response) {

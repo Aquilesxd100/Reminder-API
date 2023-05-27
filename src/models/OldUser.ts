@@ -1,15 +1,14 @@
 import { ReminderEditType } from "../types/types";
+import crypto from "crypto";
 import Reminder from "./Reminder";
 
 export default class User {
-    private userName: string
-    private password: string
-    private id: string
-    private reminders: Array<Reminder> = []
-    constructor(userDB : any, reminders? : Array<Reminder>){
-        this.userName = userDB.username;
-        this.password = userDB.password;
-        this.id = userDB.id;
+    private id: string = crypto.randomUUID();
+    private reminders: Array<Reminder> = [];
+    constructor(
+        private userName: string,
+        private password: string,
+        ){
     };
     getUserId() {
         return this.id;

@@ -1,14 +1,14 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../models/OldUser";
-import Reminder from "../models/OldReminder";
+import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
 
-export default function validReminderIdMiddleware
+export default async function validReminderIdMiddleware
 (req : Request, res : Response, next : NextFunction) {
     const reminderId : string = req.params.reminderId;
     const loggedUser : User = req.body.loggedUser;
-    if (typeof reminderId !== "string") return res.status(400).send({ message: "ID do recado inválido." })
-    const reminderIndex : number = loggedUser.getReminders().findIndex((reminder : Reminder) => reminder.getReminderId() === reminderId);
-    if(reminderIndex === -1) return res.status(404).send({ message: "Nenhum recado com esse ID foi encontrado." });
-    req.body.reminderIndex = reminderIndex;
+    if (typeof reminderId !== "string" || reminderId.length !== 36) return res.status(400).send({ message: "ID do recado inválido." })
+    const reminder : RemindersEntity | null = await RemindersEntity.findOne({ where: { id: reminderId }});
+    if(!reminder || reminder.user_id !== loggedUser.getUserId()) return res.status(404).send({ message: "Nenhum recado com esse ID foi encontrado." });
+    req.body.reminderEntity = reminder;
     next();
 };

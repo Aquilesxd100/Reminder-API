@@ -1,4 +1,4 @@
-import { UsersEntity } from "../../app/shared/entities/UsersEntity";
+import { UsersEntity } from "../../app/shared/entities/usersEntity";
 
 export default async function userValidation(userNameParam : string): Promise<string | boolean> {
     let validation : string | boolean = true;

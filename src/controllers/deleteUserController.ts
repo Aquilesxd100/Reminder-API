@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { UsersEntity } from "../app/shared/entities/UsersEntity";
+import { UsersEntity } from "../app/shared/entities/usersEntity";
 
 export default async function deleteUserController(req : Request, res : Response) {
     const loggedUserEntity : UsersEntity = req.body.loggedUserEntity;

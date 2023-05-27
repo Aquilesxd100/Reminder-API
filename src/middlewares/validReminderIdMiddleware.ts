@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../models/User";
-import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
+import { RemindersEntity } from "../app/shared/entities/remindersEntity";
 
 export default async function validReminderIdMiddleware
 (req : Request, res : Response, next : NextFunction) {

@@ -1,6 +1,6 @@
 import { Response, Request } from "express";
 import { ReminderEditType } from "../types/types";
-import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
+import { RemindersEntity } from "../app/shared/entities/remindersEntity";
 
 export default async function updateReminderController(req : Request, res : Response) {
     const reminder : RemindersEntity = req.body.reminderEntity;

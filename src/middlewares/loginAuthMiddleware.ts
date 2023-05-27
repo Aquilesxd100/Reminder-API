@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../models/User";
-import { UsersEntity } from "../app/shared/entities/UsersEntity";
+import { UsersEntity } from "../app/shared/entities/usersEntity";
 
 export default async function loginAuthMiddleware
 (req : Request, res : Response, next : NextFunction) {

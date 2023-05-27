@@ -1,7 +1,7 @@
 import { Response, Request } from "express";
 import User from "../models/User";
 import initialUpperLetter from "../helpers/initialUpperLetter";
-import { RemindersEntity } from "../app/shared/entities/RemindersEntity";
+import { RemindersEntity } from "../app/shared/entities/remindersEntity";
 
 export default async function createReminderController(req : Request, res : Response) {
     const loggedUser : User = req.body.loggedUser;

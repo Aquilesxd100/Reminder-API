@@ -12,8 +12,8 @@ import getUserNameController from "../../../app/features/user/controllers/getUse
 function registerRoutes(app : Application) {
     app.post("/newuser/:userName/:password", createUserController);
     app.delete("/deleteuser", deleteUserController);
-    app.get("/login/:userName/:password", loginController);
     app.get("/username", getUserNameController);
+    app.get("/login/:userName/:password", loginController);
 
     app.post("/newreminder", createReminderController);
     app.put("/updatereminder/:reminderId", updateReminderController);

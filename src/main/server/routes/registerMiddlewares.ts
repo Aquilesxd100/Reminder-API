@@ -1,21 +1,21 @@
 import { Application } from "express";
-import authNewReminderMiddleware from "../../../app/features/reminder/validators/middlewares/validNewReminderMiddleware";
+import validNewReminderMiddleware from "../../../app/features/reminder/validators/middlewares/validNewReminderMiddleware";
 import loginAuthMiddleware from "../../../app/features/user/validators/middlewares/loginAuthMiddleware";
-import signUpAuthMiddleware from "../../../app/features/user/validators/middlewares/signUpValidMiddleware";
-import validTokenMiddleware from "../../../app/features/auth/validators/middlewares/authTokenMiddleware";
-import authUpdateReminderMiddleware from "../../../app/features/reminder/validators/middlewares/validUpdateReminderMiddleware";
-import queriesAuthMiddleware from "../../../app/features/reminder/validators/middlewares/validQueriesMiddleware";
+import signUpValidMiddleware from "../../../app/features/user/validators/middlewares/signUpValidMiddleware";
+import authTokenMiddleware from "../../../app/features/auth/validators/middlewares/authTokenMiddleware";
+import validUpdateReminderMiddleware from "../../../app/features/reminder/validators/middlewares/validUpdateReminderMiddleware";
+import validQueriesMiddleware from "../../../app/features/reminder/validators/middlewares/validQueriesMiddleware";
 import validReminderIdMiddleware from "../../../app/features/reminder/validators/middlewares/validReminderIdMiddleware";
 
 export default function registerMiddlewares(app : Application) {
-    app.post("/newuser/:userName/:password", signUpAuthMiddleware);
-    app.delete("/deleteuser", validTokenMiddleware);
+    app.post("/newuser/:userName/:password", signUpValidMiddleware);
+    app.delete("/deleteuser", authTokenMiddleware);
+    app.get("/username", authTokenMiddleware);
     app.get("/login/:userName/:password", loginAuthMiddleware);
-    app.get("/username", validTokenMiddleware);
 
-    app.post("/newreminder", [validTokenMiddleware, authNewReminderMiddleware]);
-    app.put("/updatereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware, authUpdateReminderMiddleware]);
-    app.put("/archivereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware]);
-    app.delete("/deletereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware]);
-    app.get("/reminders", validTokenMiddleware, queriesAuthMiddleware);
+    app.post("/newreminder", [authTokenMiddleware, validNewReminderMiddleware]);
+    app.put("/updatereminder/:reminderId", [authTokenMiddleware, validReminderIdMiddleware, validUpdateReminderMiddleware]);
+    app.put("/archivereminder/:reminderId", [authTokenMiddleware, validReminderIdMiddleware]);
+    app.delete("/deletereminder/:reminderId", [authTokenMiddleware, validReminderIdMiddleware]);
+    app.get("/reminders", authTokenMiddleware, validQueriesMiddleware);
 };

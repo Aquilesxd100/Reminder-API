@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import actionValidation from "../../validators/reminderValidations/actionValidation";
-import dateValidation from "../../validators/reminderValidations/dateValidation";
-import timeValidation from "../../validators/reminderValidations/timeValidation";
-import descriptionValidation from "../../validators/reminderValidations/descriptionValidation";
+import actionValidation from "../actionValidation";
+import dateValidation from "../dateValidation";
+import timeValidation from "../timeValidation";
+import descriptionValidation from "../descriptionValidation";
 
 export default function validNewReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {

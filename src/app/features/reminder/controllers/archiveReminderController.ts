@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { RemindersEntity } from "../../shared/entities/remindersEntity";
+import { RemindersEntity } from "../../../shared/entities/remindersEntity";
 
 export default async function archiveReminderController(req : Request, res : Response) {
     const reminder : RemindersEntity = req.body.reminderEntity;

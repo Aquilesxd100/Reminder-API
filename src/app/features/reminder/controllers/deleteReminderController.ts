@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { RemindersEntity } from "../../shared/entities/remindersEntity";
+import { RemindersEntity } from "../../../shared/entities/remindersEntity";
 
 export default async function deleteReminderController(req : Request, res : Response) {
     const reminder : RemindersEntity = req.body.reminderEntity;

@@ -2,7 +2,7 @@ import { Repository } from "typeorm";
 import { UsersEntity } from "src/app/shared/entities/usersEntity";
 import { pgHelper } from "src/app/shared/helpers/pg-helper";
 
-export class UserTypeOrmRepository {
+class UserTypeOrmRepository {
     private userRepository : Repository<UsersEntity>;
 
     constructor() {
@@ -11,6 +11,10 @@ export class UserTypeOrmRepository {
 
     async getUserByID(idParam : string) : Promise<UsersEntity | null> {
         return await this.userRepository.findOne({ where: { id: idParam } });
+    };
+
+    async getUserByUserName(username : string) : Promise<UsersEntity | null> {
+        return await this.userRepository.findOne({ where: { username: username } });
     };
 
     async createUser(newUser : UsersEntity) : Promise<void> {

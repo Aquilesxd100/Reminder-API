@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import userValidationCreation from "../../validators/newAccountValidation/userValidationCreation";
-import passwordValidationCreation from "../../validators/newAccountValidation/passwordValidationCreation";
+import userValidationCreation from "../newAccountValidation/userValidationCreation";
+import passwordValidationCreation from "../newAccountValidation/passwordValidationCreation";
 
 export default async function signUpValidMiddleware
 (req : Request, res : Response, next : NextFunction) {  

@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { UsersEntity } from "../../../shared/entities/usersEntity";
-import { authEnv } from "../../../envs/env";
-import User from "../../../models/User";
+import { UsersEntity } from "../../../../shared/entities/usersEntity";
+import { authEnv } from "../../../../envs/env";
+import User from "../../../../models/User";
+import { userRepository } from "../../../user/repository/userTypeOrmRepository";
 const jwt = require("jsonwebtoken");
 
 export default async function authTokenMiddleware
@@ -13,14 +14,14 @@ export default async function authTokenMiddleware
     await jwt.verify(token, authEnv, async (error : any, user : any) => {
         if(error) jwtCheck = false;
         if(user) {
-            const dbUser = await UsersEntity.findOne({ where: { id: user.userId }});
+            const dbUser : UsersEntity | null = await userRepository.getUserByID(user.userId);
             if(dbUser) {
-                req.body.loggedUser = new User(dbUser);
+                req.body.loggedUser = dbUser;
                 req.body.loggedUserEntity = dbUser;
             };
         }
         if(!req.body.loggedUser) jwtCheck = false;
     });
-    if(!jwtCheck) return res.status(403).send({ message: "Você não tem acesso a essa pagina." });
+    if(!jwtCheck) return res.status(401).send({ message: "Você não tem acesso a essa pagina." });
     next(); 
 };

@@ -1,9 +1,9 @@
 import { Response, Request, NextFunction } from "express";
-import actionValidation from "../../validators/reminderValidations/actionValidation";
-import dateValidation from "../../validators/reminderValidations/dateValidation";
-import timeValidation from "../../validators/reminderValidations/timeValidation";
-import descriptionValidation from "../../validators/reminderValidations/descriptionValidation";
-import initialUpperLetter from "../../../shared/helpers/initialUpperLetter";
+import actionValidation from "../actionValidation";
+import dateValidation from "../dateValidation";
+import timeValidation from "../timeValidation";
+import descriptionValidation from "../descriptionValidation";
+import initialUpperLetter from "../../../../shared/helpers/initialUpperLetter";
 
 export default function validUpdateReminderMiddleware
 (req : Request, res : Response, next : NextFunction) {

@@ -1,14 +1,9 @@
 import { Response, Request } from "express";
 import { RemindersEntity } from "../../../shared/entities/remindersEntity";
+import changeArchiveStatus from "../usecases/changeArchiveStatus";
 
 export default async function archiveReminderController(req : Request, res : Response) {
     const reminder : RemindersEntity = req.body.reminderEntity;
-    if(!reminder.archived) {
-        reminder.archived = true;
-        await reminder.save();
-        return res.status(200).send({ message: "Recado arquivado com sucesso!" });
-    };
-    reminder.archived = false;
-    await reminder.save();
-    return res.status(200).send({ message: "Recado desarquivado com sucesso!" });
+    const responseMessage : string = await changeArchiveStatus(reminder);
+    return res.status(200).send({ message: responseMessage });
 };

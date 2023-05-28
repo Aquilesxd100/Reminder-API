@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { UsersEntity } from "../../../shared/entities/usersEntity";
-import { deleteUser } from "../usecases/deleteUser";
+import deleteUser from "../usecases/deleteUser";
 
 export default async function deleteUserController(req : Request, res : Response) {
     const loggedUserEntity : UsersEntity = req.body.loggedUserEntity;

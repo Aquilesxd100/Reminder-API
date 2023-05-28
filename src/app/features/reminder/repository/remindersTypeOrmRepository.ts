@@ -17,9 +17,9 @@ class RemindersTypeOrmRepository {
         return allReminders.map((reminderDB : RemindersEntity) => new Reminder(reminderDB))
     };
 
-    async getReminderByID(reminderID : string, userID : string) : Promise<RemindersEntity | null> {
+    async getReminderByID(reminderID : string) : Promise<RemindersEntity | null> {
         return await this.reminderRepository.findOne({
-            where: { id : reminderID, user_id: userID }
+            where: { id : reminderID }
         });
     };
 

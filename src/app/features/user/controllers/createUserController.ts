@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { createUser } from "../usecases/createUser";
+import createUser from "../usecases/createUser";
 
 export default async function createUserController(req : Request, res : Response) {
     const { userName, password } = req.params;

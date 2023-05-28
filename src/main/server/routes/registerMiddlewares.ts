@@ -9,9 +9,9 @@ import validReminderIdMiddleware from "../../../app/features/reminder/validators
 
 export default function registerMiddlewares(app : Application) {
     app.post("/newuser/:userName/:password", signUpAuthMiddleware);
+    app.delete("/deleteuser", validTokenMiddleware);
     app.get("/login/:userName/:password", loginAuthMiddleware);
     app.get("/username", validTokenMiddleware);
-    app.delete("/deleteuser", validTokenMiddleware);
 
     app.post("/newreminder", [validTokenMiddleware, authNewReminderMiddleware]);
     app.put("/updatereminder/:reminderId", [validTokenMiddleware, validReminderIdMiddleware, authUpdateReminderMiddleware]);

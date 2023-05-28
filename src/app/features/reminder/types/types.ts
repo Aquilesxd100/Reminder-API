@@ -10,3 +10,8 @@ export interface ReminderType {
     time: string,
     description : string
 };
+export interface GetRemindersParamType {
+    search: string | undefined,
+    archived: true | undefined,
+    userId: string
+};

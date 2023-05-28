@@ -10,7 +10,7 @@ class RemindersTypeOrmRepository {
         this.reminderRepository = pgHelper.client.manager.getRepository(RemindersEntity);
     };
 
-    async getReminders(userID : string) : Promise<Array<Reminder>> {
+    async getRemindersByUserId(userID : string) : Promise<Array<Reminder>> {
         const allReminders : Array<RemindersEntity> = await this.reminderRepository.find({
             where: { user_id: userID }
         });

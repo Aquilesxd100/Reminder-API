@@ -9,7 +9,7 @@ export class UserTypeOrmRepository {
         this.userRepository = pgHelper.client.manager.getRepository(UsersEntity);
     };
 
-    async findUserByID(idParam : string) : Promise<UsersEntity | null> {
+    async getUserByID(idParam : string) : Promise<UsersEntity | null> {
         return await this.userRepository.findOne({ where: { id: idParam } });
     };
 
@@ -20,4 +20,6 @@ export class UserTypeOrmRepository {
     async deleteUser(currentUser : UsersEntity) : Promise<void> {
         await this.userRepository.remove(currentUser);
     };
-}
+};
+
+export const userRepository = new UserTypeOrmRepository;

@@ -1,6 +1,6 @@
 import { Application } from "express";
 import validNewReminderMiddleware from "../../../app/features/reminder/validators/middlewares/validNewReminderMiddleware";
-import loginAuthMiddleware from "../../../app/features/user/validators/middlewares/loginAuthMiddleware";
+import loginAuthMiddleware from "../../../app/features/auth/validators/middlewares/loginAuthMiddleware";
 import signUpValidMiddleware from "../../../app/features/user/validators/middlewares/signUpValidMiddleware";
 import authTokenMiddleware from "../../../app/features/auth/validators/middlewares/authTokenMiddleware";
 import validUpdateReminderMiddleware from "../../../app/features/reminder/validators/middlewares/validUpdateReminderMiddleware";

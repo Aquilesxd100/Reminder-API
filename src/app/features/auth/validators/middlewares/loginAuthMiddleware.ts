@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import User from "../../../../models/User";
-import { userRepository } from "../../repository/userTypeOrmRepository";
+import { userRepository } from "../../../user/repository/userTypeOrmRepository";
 
 export default async function loginAuthMiddleware
 (req : Request, res : Response, next : NextFunction) {

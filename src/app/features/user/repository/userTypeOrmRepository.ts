@@ -1,5 +1,5 @@
 import { Repository } from "typeorm";
-import { UsersEntity } from "src/app/shared/entities/usersEntity";
+import { UsersEntity } from "../../../shared/entities/usersEntity";
 import { pgHelper } from "src/app/shared/helpers/pg-helper";
 
 class UserTypeOrmRepository {

@@ -3,9 +3,11 @@ import { UsersEntity } from "../../../shared/entities/usersEntity";
 import { pgHelper } from "../../../shared/helpers/pg-helper";
 
 class UserTypeOrmRepository {
-    private userRepository : Repository<UsersEntity>;
+    private userRepository? : Repository<UsersEntity> | any;
 
-    constructor() {
+    constructor() {};
+
+    setRepository() {
         this.userRepository = pgHelper.client.manager.getRepository(UsersEntity);
     };
 

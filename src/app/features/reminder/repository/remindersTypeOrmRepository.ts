@@ -4,9 +4,12 @@ import { pgHelper } from "../../../shared/helpers/pg-helper";
 import Reminder from "../../../models/Reminder";
 
 class RemindersTypeOrmRepository {
-    private reminderRepository : Repository<RemindersEntity>;
+    private reminderRepository? : Repository<RemindersEntity> | any;
     
-    constructor() {
+    constructor() {;
+    };
+    
+    setRepository() {
         this.reminderRepository = pgHelper.client.manager.getRepository(RemindersEntity);
     };
 

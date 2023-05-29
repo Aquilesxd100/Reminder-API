@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table, TableColumn } from "typeorm";
 
-export class RemindersAPITable1685325279944 implements MigrationInterface {
+export class RemindersAPITable1685369212043 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(

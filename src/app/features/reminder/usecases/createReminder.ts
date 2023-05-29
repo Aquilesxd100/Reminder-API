@@ -1,6 +1,6 @@
-import User from "src/app/models/User";
-import { RemindersEntity } from "src/app/shared/entities/remindersEntity";
-import initialUpperLetter from "src/app/shared/helpers/initialUpperLetter";
+import User from "../../../models/User";
+import { RemindersEntity } from "../../../shared/entities/remindersEntity";
+import initialUpperLetter from "../../../shared/helpers/initialUpperLetter";
 import { reminderRepository } from "../repository/remindersTypeOrmRepository";
 
 export default async function createReminder(requestInfos : any) : Promise<void> {

@@ -1,10 +1,9 @@
 import { DataSourceOptions } from "typeorm";
 import { UsersEntity } from "../../app/shared/entities/usersEntity";
 import { RemindersEntity } from "../../app/shared/entities/remindersEntity";
-import { UsersAPITable1685060630654 } from "../../app/shared/migrations/1685060630654-UsersAPITable";
-import { RemindersAPITable1685060638579 } from "../../app/shared/migrations/1685060638579-RemindersAPITable";
+import { UsersAPITable1685325301271 } from "../../app/shared/migrations/1685325301271-UsersAPITable";
+import { RemindersAPITable1685325279944 } from "../../app/shared/migrations/1685325279944-RemindersAPITable";
 import { apiEnv } from "../../app/envs/env";
-
 const config : DataSourceOptions = {
     type: "postgres",
     url: apiEnv.dbUrl,
@@ -14,6 +13,6 @@ const config : DataSourceOptions = {
         rejectUnauthorized: false,
     },
     entities: [UsersEntity, RemindersEntity],
-    migrations: [UsersAPITable1685060630654, RemindersAPITable1685060638579]
+    migrations: [UsersAPITable1685325301271, RemindersAPITable1685325279944]
 };
 export default config;

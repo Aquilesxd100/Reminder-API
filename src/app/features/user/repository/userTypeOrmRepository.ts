@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
 import { UsersEntity } from "../../../shared/entities/usersEntity";
-import { pgHelper } from "src/app/shared/helpers/pg-helper";
+import { pgHelper } from "../../../shared/helpers/pg-helper";
 
 class UserTypeOrmRepository {
     private userRepository : Repository<UsersEntity>;

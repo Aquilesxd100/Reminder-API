@@ -1,4 +1,4 @@
-import { RemindersEntity } from "src/app/shared/entities/remindersEntity";
+import { RemindersEntity } from "../../../shared/entities/remindersEntity";
 import { ReminderEditType } from "../types/types";
 import { reminderRepository } from "../repository/remindersTypeOrmRepository";
 

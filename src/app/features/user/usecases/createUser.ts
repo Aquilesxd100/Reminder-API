@@ -1,4 +1,4 @@
-import { UsersEntity } from "src/app/shared/entities/usersEntity";
+import { UsersEntity } from "../../../shared/entities/usersEntity";
 import { userRepository } from "../repository/userTypeOrmRepository";
 
 export default async function createUser

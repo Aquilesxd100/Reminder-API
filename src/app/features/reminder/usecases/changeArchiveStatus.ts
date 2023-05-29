@@ -1,4 +1,4 @@
-import { RemindersEntity } from "src/app/shared/entities/remindersEntity";
+import { RemindersEntity } from "../../../shared/entities/remindersEntity";
 import { reminderRepository } from "../repository/remindersTypeOrmRepository";
 
 export default async function changeArchiveStatus

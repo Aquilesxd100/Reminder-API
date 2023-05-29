@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { UsersEntity } from "../../../../shared/entities/usersEntity";
 import { authEnv } from "../../../../envs/env";
-import User from "../../../../models/User";
 import { userRepository } from "../../../user/repository/userTypeOrmRepository";
 const jwt = require("jsonwebtoken");
 

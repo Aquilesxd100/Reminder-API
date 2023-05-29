@@ -1,4 +1,4 @@
-import Reminder from "src/app/models/Reminder";
+import Reminder from "../../../models/Reminder";
 import { reminderRepository } from "../repository/remindersTypeOrmRepository";
 import { GetRemindersParamType } from "../types/types";
 

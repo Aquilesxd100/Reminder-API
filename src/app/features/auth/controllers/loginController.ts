@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import generateNewToken from "../usecases/generateNewToken";
-import User from "src/app/models/User";
+import User from "../../../models/User";
 
 export default async function loginController(req : Request, res : Response) {
     const user : User = req.body.loggedUser;

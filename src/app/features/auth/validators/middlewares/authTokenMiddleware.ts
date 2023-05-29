@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { UsersEntity } from "../../../../shared/entities/usersEntity";
 import { authEnv } from "../../../../envs/env";
 import { userRepository } from "../../../user/repository/userTypeOrmRepository";
+import User from "../../../../models/User";
 const jwt = require("jsonwebtoken");
 
 export default async function authTokenMiddleware
@@ -15,7 +16,7 @@ export default async function authTokenMiddleware
         if(user) {
             const dbUser : UsersEntity | null = await userRepository.getUserByID(user.userId);
             if(dbUser) {
-                req.body.loggedUser = dbUser;
+                req.body.loggedUser = new User(dbUser);
                 req.body.loggedUserEntity = dbUser;
             };
         }

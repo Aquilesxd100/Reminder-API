@@ -1,5 +1,6 @@
 import { DataSource } from "typeorm";
-import { dataSource, testDataSource } from "../../../main/database/typeorm";
+import { dataSource } from "../../../main/database/typeorm";
+import { testDataSource } from "../../../main/database/testtypeorm";
 import { reminderRepository } from "../../features/reminder/repository/remindersTypeOrmRepository";
 import { userRepository } from "../../features/user/repository/userTypeOrmRepository";
 

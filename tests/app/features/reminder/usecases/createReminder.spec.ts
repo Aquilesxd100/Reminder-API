@@ -3,7 +3,7 @@ import { RemindersTypeOrmRepository } from "../../../../../src/app/features/remi
 import User from "../../../../../src/app/models/User";
 import { UsersEntity } from "../../../../../src/app/shared/entities/usersEntity";
 
-describe('Testes do useCase changeArchiveStatus.', () => {
+describe('Testes do useCase createReminder.', () => {
     beforeAll(() => {
         jest.spyOn(RemindersTypeOrmRepository.prototype, "saveReminder").mockResolvedValue();
     });

@@ -2,7 +2,7 @@ import { Repository } from "typeorm";
 import { UsersEntity } from "../../../shared/entities/usersEntity";
 import { pgHelper } from "../../../shared/helpers/pg-helper";
 
-class UserTypeOrmRepository {
+export class UserTypeOrmRepository {
     private userRepository? : Repository<UsersEntity> | any;
 
     constructor() {};

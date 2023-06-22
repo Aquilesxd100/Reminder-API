@@ -3,7 +3,7 @@ import { RemindersEntity } from "../../../shared/entities/remindersEntity";
 import { pgHelper } from "../../../shared/helpers/pg-helper";
 import Reminder from "../../../models/Reminder";
 
-class RemindersTypeOrmRepository {
+export class RemindersTypeOrmRepository {
     private reminderRepository? : Repository<RemindersEntity> | any;
     
     constructor() {;

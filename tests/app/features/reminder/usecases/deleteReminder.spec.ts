@@ -1,8 +1,8 @@
 import deleteReminder from "../../../../../src/app/features/reminder/usecases/deleteReminder";
 import { RemindersTypeOrmRepository } from "../../../../../src/app/features/reminder/repository/remindersTypeOrmRepository"
-import { RemindersEntity } from "src/app/shared/entities/remindersEntity";
+import { RemindersEntity } from "../../../../../src/app/shared/entities/remindersEntity";
 
-describe.skip('Testes do useCase deleteReminder.', () => {
+describe('Testes do useCase deleteReminder.', () => {
     beforeAll(() => {
         jest.spyOn(RemindersTypeOrmRepository.prototype, "deleteReminder").mockResolvedValue();
     });

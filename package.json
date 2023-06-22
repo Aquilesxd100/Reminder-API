@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install && tsc && npx typeorm migration:run -d src/main/database/typeorm.js",
+    "test": "jest --silent --noStackTrace --runInBand",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "author": "",

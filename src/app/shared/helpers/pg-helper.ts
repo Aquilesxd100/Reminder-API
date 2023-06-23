@@ -17,6 +17,6 @@ export const pgHelper = {
     },
     async disconnect() : Promise<void> {
         await this.client.destroy();
-        this.client = null as any
+        this.client = null as any;
     }
 };

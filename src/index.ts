@@ -5,9 +5,10 @@ import { pgHelper } from "./app/shared/helpers/pg-helper";
 import { apiEnv } from "./app/envs/env";
 import serverConfig from "./main/config/serverconfig";
 
-const app : Application = express();
+export const app : Application = express();
 
-pgHelper.connect()
+export const connection = async (testMode? : boolean | undefined) => 
+    await pgHelper.connect(testMode)
     .then(() => {
         serverConfig(app);
         registerMiddlewares(app);
@@ -18,4 +19,6 @@ pgHelper.connect()
             console.log(`Aplicacao ativa escutando a porta ${apiEnv.port}.`)
         )
     }).catch((err) => console.log(err));  
+
+connection();
 

@@ -31,6 +31,7 @@ describe("Testes da rota de login.", () => {
 
         expect(responseMessage).toBe("Usuário logado com sucesso!");
         expect(result._body.token).not.toBe(undefined);
+        expect(result.status).toBe(200);
     });
 
 

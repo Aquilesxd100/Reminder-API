@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">18.18% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/11</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -80,31 +80,31 @@
 <a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Request, Response, NextFunction } from "express";
 import User from "../../../../models/User";
 import { RemindersEntity } from "../../../../shared/entities/remindersEntity";
 import { reminderRepository } from "../../repository/remindersTypeOrmRepository";
 &nbsp;
-export default async function <span class="fstat-no" title="function not covered" >validReminderIdMiddleware</span>
+export default async function validReminderIdMiddleware
 (req : Request, res : Response, next : NextFunction) {
-    const reminderId : string = <span class="cstat-no" title="statement not covered" >req.params.reminderId;</span>
-    const loggedUser : User = <span class="cstat-no" title="statement not covered" >req.body.loggedUser;</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof reminderId !== "string" || reminderId.length !== 36) <span class="cstat-no" title="statement not covered" >return res.status(400).send({ message: "ID do recado inválido." })</span></span>
-    const reminder : RemindersEntity | null = <span class="cstat-no" title="statement not covered" >await reminderRepository.getReminderByID(reminderId);</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if(!reminder || reminder.user_id !== loggedUser.getUserId()) <span class="cstat-no" title="statement not covered" >return res.status(404).send({ message: "Nenhum recado com esse ID foi encontrado." });</span></span>
-<span class="cstat-no" title="statement not covered" >    req.body.reminderEntity = reminder;</span>
-<span class="cstat-no" title="statement not covered" >    next();</span>
+    const reminderId : string = req.params.reminderId;
+    const loggedUser : User = req.body.loggedUser;
+    if (typeof reminderId !== "string" || reminderId.length !== 36) return res.status(400).send({ message: "ID do recado inválido." })
+    const reminder : RemindersEntity | null = await reminderRepository.getReminderByID(reminderId);
+    if(!reminder || reminder.user_id !== loggedUser.getUserId()) return res.status(404).send({ message: "Nenhum recado com esse ID foi encontrado." });
+    req.body.reminderEntity = reminder;
+    next();
 };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -112,7 +112,7 @@ export default async function <span class="fstat-no" title="function not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-06-24T02:02:47.266Z
+                at 2023-06-24T18:58:25.587Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

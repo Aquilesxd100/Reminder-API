@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm install && tsc && npx typeorm migration:run -d src/main/database/typeorm.js",
     "test": "jest --silent --noStackTrace --runInBand --forceExit",
+    "test-coverage": "jest -c jest.unit.config.ts --silent --noStackTrace --runInBand --coverage --forceExit",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "author": "",
@@ -29,5 +30,8 @@
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.16",
     "typescript": "^5.0.3"
+  },
+  "jest": {
+    "testTimeout": 15000
   }
 }

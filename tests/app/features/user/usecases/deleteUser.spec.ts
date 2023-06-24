@@ -1,7 +1,7 @@
 import deleteUser from "../../../../../src/app/features/user/usecases/deleteUser";
 import { UserTypeOrmRepository } from "../../../../../src/app/features/user/repository/userTypeOrmRepository"
 import { UsersEntity } from "../../../../../src/app/shared/entities/usersEntity";
-import { RemindersTypeOrmRepository } from "src/app/features/reminder/repository/remindersTypeOrmRepository";
+import { RemindersTypeOrmRepository } from "../../../../../src/app/features/reminder/repository/remindersTypeOrmRepository";
 
 describe('Testes do useCase deleteUser.', () => {
     beforeAll(() => {

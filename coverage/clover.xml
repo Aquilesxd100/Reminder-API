@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1687567555385" clover="3.2.0">
-  <project timestamp="1687567555385" name="All files">
-    <metrics statements="355" coveredstatements="281" conditionals="118" coveredconditionals="64" methods="68" coveredmethods="50" elements="541" coveredelements="395" complexity="0" loc="355" ncloc="355" packages="17" files="39" classes="39"/>
+<coverage generated="1687572167440" clover="3.2.0">
+  <project timestamp="1687572167441" name="All files">
+    <metrics statements="355" coveredstatements="285" conditionals="118" coveredconditionals="70" methods="68" coveredmethods="50" elements="541" coveredelements="405" complexity="0" loc="355" ncloc="355" packages="17" files="39" classes="39"/>
     <package name="envs">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="env.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\envs\env.ts">
@@ -17,9 +17,9 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="5" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
-        <line num="6" count="9" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="9" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
       </file>
     </package>
     <package name="features.auth.usecases">
@@ -29,8 +29,8 @@
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
       </file>
     </package>
     <package name="features.auth.validators.middlewares">
@@ -62,14 +62,14 @@
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="10" type="cond" truecount="2" falsecount="1"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="cond" truecount="2" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="12" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="cond" truecount="3" falsecount="0"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="15" count="9" type="stmt"/>
-        <line num="16" count="9" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
       </file>
     </package>
     <package name="features.reminder.controllers">
@@ -125,7 +125,7 @@
         <line num="3" count="12" type="stmt"/>
         <line num="4" count="12" type="stmt"/>
         <line num="6" count="12" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
@@ -173,17 +173,17 @@
         <metrics statements="13" coveredstatements="12" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
         <line num="2" count="6" type="stmt"/>
         <line num="5" count="6" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="9" type="stmt"/>
-        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="3" type="cond" truecount="1" falsecount="1"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="17" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
       </file>
       <file name="updateReminder.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\usecases\updateReminder.ts">
         <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
@@ -333,9 +333,9 @@
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
       </file>
       <file name="deleteUserController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\controllers\deleteUserController.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -358,10 +358,10 @@
         <line num="2" count="12" type="stmt"/>
         <line num="3" count="12" type="stmt"/>
         <line num="5" count="12" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
         <line num="15" count="11" type="stmt"/>
-        <line num="19" count="19" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="19" count="18" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="31" count="12" type="stmt"/>
       </file>
@@ -373,10 +373,10 @@
         <line num="1" count="6" type="stmt"/>
         <line num="2" count="6" type="stmt"/>
         <line num="4" count="6" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
       </file>
       <file name="deleteUser.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\usecases\deleteUser.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -386,60 +386,60 @@
       </file>
     </package>
     <package name="features.user.validators.middlewares">
-      <metrics statements="12" coveredstatements="11" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <metrics statements="12" coveredstatements="11" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="signUpValidMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\validators\middlewares\signUpValidMiddleware.ts">
-        <metrics statements="12" coveredstatements="11" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <metrics statements="12" coveredstatements="11" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="9" type="cond" truecount="2" falsecount="1"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="cond" truecount="2" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="11" count="9" type="stmt"/>
-        <line num="12" count="9" type="stmt"/>
-        <line num="13" count="9" type="stmt"/>
-        <line num="14" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="14" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
       </file>
     </package>
     <package name="features.user.validators.newAccountValidation">
-      <metrics statements="30" coveredstatements="26" conditionals="9" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="30" coveredstatements="30" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
       <file name="passwordValidationCreation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\validators\newAccountValidation\passwordValidationCreation.ts">
-        <metrics statements="21" coveredstatements="17" conditionals="6" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
         <line num="1" count="5" type="stmt"/>
-        <line num="2" count="9" type="stmt"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="6" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="9" type="stmt"/>
-        <line num="13" count="90" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="27" type="stmt"/>
-        <line num="17" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="9" type="stmt"/>
-        <line num="21" count="9" type="stmt"/>
-        <line num="22" count="234" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="9" type="stmt"/>
-        <line num="26" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="9" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="3" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
+        <line num="6" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="130" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="32" type="stmt"/>
+        <line num="17" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="21" count="13" type="stmt"/>
+        <line num="22" count="338" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="21" type="stmt"/>
+        <line num="26" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="13" type="stmt"/>
       </file>
       <file name="userValidationCreation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\validators\newAccountValidation\userValidationCreation.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="1" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
-        <line num="4" count="9" type="stmt"/>
-        <line num="5" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="6" count="9" type="cond" truecount="0" falsecount="1"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="11" count="9" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
       </file>
     </package>
     <package name="models">
@@ -454,20 +454,20 @@
         <line num="13" count="3" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="29" count="4" type="stmt"/>
-        <line num="32" count="11" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="32" count="8" type="stmt"/>
         <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
       <file name="User.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\models\User.ts">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <line num="2" count="6" type="stmt"/>
-        <line num="7" count="18" type="stmt"/>
-        <line num="8" count="18" type="stmt"/>
-        <line num="9" count="18" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+        <line num="8" count="13" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
       </file>
@@ -483,12 +483,12 @@
         <line num="10" count="12" type="stmt"/>
         <line num="13" count="12" type="stmt"/>
         <line num="16" count="12" type="stmt"/>
-        <line num="19" count="22" type="stmt"/>
+        <line num="19" count="23" type="stmt"/>
         <line num="22" count="12" type="stmt"/>
         <line num="25" count="12" type="stmt"/>
         <line num="28" count="12" type="stmt"/>
         <line num="31" count="12" type="stmt"/>
-        <line num="33" count="4" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
         <line num="35" count="12" type="stmt"/>
       </file>
       <file name="usersEntity.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\entities\usersEntity.ts">
@@ -496,13 +496,13 @@
         <line num="1" count="12" type="stmt"/>
         <line num="4" count="12" type="stmt"/>
         <line num="6" count="12" type="stmt"/>
-        <line num="9" count="35" type="stmt"/>
-        <line num="12" count="35" type="stmt"/>
+        <line num="9" count="29" type="stmt"/>
+        <line num="12" count="29" type="stmt"/>
         <line num="15" count="12" type="stmt"/>
       </file>
     </package>
     <package name="shared.helpers">
-      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="initialUpperLetter.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\helpers\initialUpperLetter.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="6" type="stmt"/>
@@ -511,18 +511,18 @@
         <line num="4" count="4" type="stmt"/>
       </file>
       <file name="pg-helper.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\helpers\pg-helper.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="2" count="12" type="stmt"/>
         <line num="3" count="12" type="stmt"/>
         <line num="4" count="12" type="stmt"/>
         <line num="5" count="12" type="stmt"/>
         <line num="8" count="12" type="stmt"/>
-        <line num="11" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="15" count="4" type="stmt"/>
-        <line num="16" count="4" type="stmt"/>
+        <line num="11" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
         <line num="19" count="5" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
       </file>
     </package>
   </project>

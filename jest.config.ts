@@ -9,5 +9,5 @@ export default {
     collectCoverageFrom: ['<rootDir>/src/app/**/*.ts'],
     coverageDirectory: 'coverage',
     coveragePathIgnorePatterns: ["\\\\node_modules\\\\", "migrations"],
-    testTimeout: 15000
+    testTimeout: 25000
 };

@@ -134,6 +134,4 @@ describe("Testes da rota de newReminder.", () => {
         expect(message).toBe("Recado criado com sucesso!");
         expect(result.status).toBe(201);
     });
-
-
 });

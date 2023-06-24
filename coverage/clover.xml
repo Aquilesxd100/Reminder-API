@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1687566280023" clover="3.2.0">
+  <project timestamp="1687566280025" name="All files">
+    <metrics statements="355" coveredstatements="285" conditionals="118" coveredconditionals="71" methods="68" coveredmethods="50" elements="541" coveredelements="406" complexity="0" loc="355" ncloc="355" packages="17" files="39" classes="39"/>
+    <package name="envs">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="env.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\envs\env.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="7" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.auth.controllers">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="loginController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\auth\controllers\loginController.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.auth.usecases">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="generateNewToken.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\auth\usecases\generateNewToken.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.auth.validators.middlewares">
+      <metrics statements="30" coveredstatements="29" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
+      <file name="authTokenMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\auth\validators\middlewares\authTokenMiddleware.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="8" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="11" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="15" count="11" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="18" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="23" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="8" type="stmt"/>
+      </file>
+      <file name="loginAuthMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\auth\validators\middlewares\loginAuthMiddleware.ts">
+        <metrics statements="11" coveredstatements="10" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="cond" truecount="2" falsecount="1"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="cond" truecount="3" falsecount="0"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.reminder.controllers">
+      <metrics statements="27" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <file name="archiveReminderController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\controllers\archiveReminderController.ts">
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="createReminderController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\controllers\createReminderController.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="deleteReminderController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\controllers\deleteReminderController.ts">
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+      <file name="getRemindersController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\controllers\getRemindersController.ts">
+        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="updateReminderController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\controllers\updateReminderController.ts">
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.reminder.repository">
+      <metrics statements="11" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
+      <file name="remindersTypeOrmRepository.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\repository\remindersTypeOrmRepository.ts">
+        <metrics statements="11" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.reminder.usecases">
+      <metrics statements="44" coveredstatements="43" conditionals="14" coveredconditionals="9" methods="7" coveredmethods="7"/>
+      <file name="changeArchiveStatus.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\usecases\changeArchiveStatus.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="createReminder.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\usecases\createReminder.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+      <file name="deleteReminder.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\usecases\deleteReminder.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="getUserReminders.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\usecases\getUserReminders.ts">
+        <metrics statements="13" coveredstatements="12" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+      </file>
+      <file name="updateReminder.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\usecases\updateReminder.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.reminder.validators">
+      <metrics statements="41" coveredstatements="32" conditionals="39" coveredconditionals="30" methods="4" coveredmethods="4"/>
+      <file name="actionValidation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\actionValidation.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+      <file name="dateValidation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\dateValidation.ts">
+        <metrics statements="18" coveredstatements="13" conditionals="20" coveredconditionals="15" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="4" type="cond" truecount="2" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+      </file>
+      <file name="descriptionValidation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\descriptionValidation.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+      <file name="timeValidation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\timeValidation.ts">
+        <metrics statements="15" coveredstatements="11" conditionals="13" coveredconditionals="9" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="2" falsecount="1"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="3" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="4" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.reminder.validators.middlewares">
+      <metrics statements="60" coveredstatements="26" conditionals="33" coveredconditionals="5" methods="7" coveredmethods="2"/>
+      <file name="validNewReminderMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\middlewares\validNewReminderMiddleware.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="21" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="validQueriesMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\middlewares\validQueriesMiddleware.ts">
+        <metrics statements="7" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="validReminderIdMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\middlewares\validReminderIdMiddleware.ts">
+        <metrics statements="9" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="validUpdateReminderMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\reminder\validators\middlewares\validUpdateReminderMiddleware.ts">
+        <metrics statements="27" coveredstatements="6" conditionals="16" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.user.controllers">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="createUserController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\controllers\createUserController.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="deleteUserController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\controllers\deleteUserController.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="getUserNameController.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\controllers\getUserNameController.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.user.repository">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="userTypeOrmRepository.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\repository\userTypeOrmRepository.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="19" count="26" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.user.usecases">
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="createUser.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\usecases\createUser.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="deleteUser.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\usecases\deleteUser.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.user.validators.middlewares">
+      <metrics statements="12" coveredstatements="11" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="signUpValidMiddleware.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\validators\middlewares\signUpValidMiddleware.ts">
+        <metrics statements="12" coveredstatements="11" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="8" count="16" type="cond" truecount="2" falsecount="1"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
+        <line num="12" count="16" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="14" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="features.user.validators.newAccountValidation">
+      <metrics statements="30" coveredstatements="30" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="2"/>
+      <file name="passwordValidationCreation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\validators\newAccountValidation\passwordValidationCreation.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="2" count="16" type="stmt"/>
+        <line num="3" count="16" type="stmt"/>
+        <line num="4" count="16" type="stmt"/>
+        <line num="5" count="16" type="stmt"/>
+        <line num="6" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="16" type="stmt"/>
+        <line num="13" count="160" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="41" type="stmt"/>
+        <line num="17" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="16" type="stmt"/>
+        <line num="21" count="16" type="stmt"/>
+        <line num="22" count="416" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="24" type="stmt"/>
+        <line num="26" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="16" type="stmt"/>
+      </file>
+      <file name="userValidationCreation.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\features\user\validators\newAccountValidation\userValidationCreation.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="16" type="stmt"/>
+        <line num="5" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="8" count="16" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="11" count="16" type="stmt"/>
+      </file>
+    </package>
+    <package name="models">
+      <metrics statements="21" coveredstatements="16" conditionals="2" coveredconditionals="0" methods="12" coveredmethods="7"/>
+      <file name="Reminder.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\models\Reminder.ts">
+        <metrics statements="14" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="4"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="32" count="11" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
+      <file name="User.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\models\User.ts">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="7" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.entities">
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="remindersEntity.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\entities\remindersEntity.ts">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="13" count="12" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="19" count="23" type="stmt"/>
+        <line num="22" count="12" type="stmt"/>
+        <line num="25" count="12" type="stmt"/>
+        <line num="28" count="12" type="stmt"/>
+        <line num="31" count="12" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+        <line num="35" count="12" type="stmt"/>
+      </file>
+      <file name="usersEntity.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\entities\usersEntity.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="9" count="37" type="stmt"/>
+        <line num="12" count="37" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.helpers">
+      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="initialUpperLetter.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\helpers\initialUpperLetter.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+      </file>
+      <file name="pg-helper.ts" path="C:\Users\ferna\Desktop\Growdev\Trabalhos\reminder-api\src\app\shared\helpers\pg-helper.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="11" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

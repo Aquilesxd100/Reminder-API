@@ -7,8 +7,9 @@
     "build": "npm install && tsc && npx typeorm migration:run -d src/main/database/typeorm.js",
     "test": "cross-env NODE_ENV=test jest --silent --noStackTrace --runInBand --detectOpenHandles",
     "test-unit": "cross-env NODE_ENV=test jest -c jest.unit.config.ts --silent --noStackTrace --runInBand --detectOpenHandles",
-    "test-integration": "cross-env NODE_ENV=test jest -c jest.integration.config.ts --silent --noStackTrace --runInBand --detectOpenHandles",
-    "test-coverage": "cross-env NODE_ENV=test jest -c --silent --noStackTrace --runInBand --coverage",
+    "test-integration": "cross-env NODE_ENV=test jest -c jest.integration.config.ts --silent --noStackTrace --runInBand",
+    "test-coverage": "cross-env NODE_ENV=test jest -c --silent --noStackTrace --runInBand --silent --coverage",
+    "test-verbose": "cross-env NODE_ENV=test jest -c --silent --noStackTrace --runInBand --silent --verbose",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "author": "",

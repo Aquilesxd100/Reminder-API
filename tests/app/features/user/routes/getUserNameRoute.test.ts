@@ -19,6 +19,19 @@ describe("Testes da rota de getUsername.", () => {
     });
 
     test("Deve retornar erro de acesso.", async () => {
+        const invalidToken = 123;
+
+        const result = await request(app)
+                            .get(`/username`)
+                            .set("authorization", `bearer ${invalidToken}`);
+        
+        const message = result._body.message;
+
+        expect(message).toBe("Você não tem acesso a essa pagina.");
+        expect(result.status).toBe(401);
+    });
+
+    test("Deve retornar erro de acesso.", async () => {
         const invalidToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyNDEzMDk0OC05YTAyLTRmNmMtYWE0MS04ODVlZmJlYjY4YmUiLCJpYXQiOjE2ODc1NTYzMjcsImV4cCI6MTY4ODg1MjMyN30.sv6EC-VHNMUKjwZ9fdEqYu7L06_GDINs6YF__rLWOCM";
 
         const result = await request(app)

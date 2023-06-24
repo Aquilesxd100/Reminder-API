@@ -13,6 +13,13 @@ export class RemindersTypeOrmRepository {
         this.reminderRepository = pgHelper.client.manager.getRepository(RemindersEntity);
     };
 
+    async getRemindersEntityByUserId(userID : string) : Promise<Array<RemindersEntity>> {
+        const allReminders : Array<RemindersEntity> = await this.reminderRepository.find({
+            where: { user_id: userID }
+        });
+        return allReminders;
+    };
+
     async getRemindersByUserId(userID : string) : Promise<Array<Reminder>> {
         const allReminders : Array<RemindersEntity> = await this.reminderRepository.find({
             where: { user_id: userID }
@@ -32,6 +39,10 @@ export class RemindersTypeOrmRepository {
 
     async deleteReminder(reminder : RemindersEntity) : Promise<void> {
         await reminder.remove();
+    };
+
+    async deleteReminders(reminders : Array<RemindersEntity>) : Promise<void> {
+        await this.reminderRepository.remove(reminders);
     };
 };
 

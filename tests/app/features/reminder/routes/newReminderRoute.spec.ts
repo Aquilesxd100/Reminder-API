@@ -3,8 +3,14 @@ import { app, connection } from "../../../../../src";
 const request = require('supertest');
 
 describe("Testes da rota de newReminder.", () => {
+    let token1 = "";
+
     beforeAll(async () => {
         await connection(true);
+
+        await request(app).post("/newuser/testuser/123a@");
+        const loginResponse = await request(app).get("/login/testuser/123a@");
+        token1 = loginResponse._body.token;
     });
     afterAll(async () => {
         await pgHelper.disconnect();
@@ -33,13 +39,10 @@ describe("Testes da rota de newReminder.", () => {
 
     test("Deve retornar um erro referente a falta de informações do novo recado.", 
     async () => {
-        await request(app).post("/newuser/testuser/123a@");
-        const loginResponse = await request(app).get("/login/testuser/123a@");
-        const token = loginResponse._body.token;
 
         const result = await request(app)
         .post(`/newreminder`)
-        .set("authorization", `bearer ${token}`);
+        .set("authorization", `bearer ${token1}`);
         const message = result._body.message;
 
         expect(message).toBe("Tipo de um ou mais dados incorreto.");
@@ -48,10 +51,6 @@ describe("Testes da rota de newReminder.", () => {
 
     test("Deve retornar um erro referente ao número de caracteres da action do recado.", 
     async () => {
-        await request(app).post("/newuser/testuser/123a@");
-        const loginResponse = await request(app).get("/login/testuser/123a@");
-        const token = loginResponse._body.token;
-
         const result = await request(app)
         .post(`/newreminder`)
         .send({
@@ -60,7 +59,7 @@ describe("Testes da rota de newReminder.", () => {
             time: "20:15",
             description: "Uma descrição do recado."
         })
-        .set("authorization", `bearer ${token}`);
+        .set("authorization", `bearer ${token1}`);
         const message = result._body.message;
 
         expect(message).toBe("O campo de Ação deve ter ao menos 1 caractere e no máximo 21.");
@@ -69,10 +68,7 @@ describe("Testes da rota de newReminder.", () => {
 
     test("Deve retornar um erro referente ao formato incorreto de data.", 
     async () => {
-        await request(app).post("/newuser/testuser/123a@");
-        const loginResponse = await request(app).get("/login/testuser/123a@");
-        const token = loginResponse._body.token;
-
+        
         const result = await request(app)
         .post(`/newreminder`)
         .send({
@@ -81,7 +77,7 @@ describe("Testes da rota de newReminder.", () => {
             time: "20:15",
             description: "Uma descrição do recado."
         })
-        .set("authorization", `bearer ${token}`);
+        .set("authorization", `bearer ${token1}`);
         const message = result._body.message;
 
         expect(message).toBe("Formato de data incorreto.");

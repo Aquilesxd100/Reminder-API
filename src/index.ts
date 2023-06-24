@@ -7,8 +7,6 @@ import serverConfig from "./main/config/serverconfig";
 
 export const app : Application = express();
 
-export let server : any = undefined;
-
 export const connection = async (testMode? : boolean | undefined) => 
     await pgHelper.connect(testMode)
     .then(() => {
@@ -17,10 +15,13 @@ export const connection = async (testMode? : boolean | undefined) =>
         registerRoutes(app);
     })
     .then(() => {
-        server = app.listen(apiEnv.port, () =>
+        if(!testMode) {
+            app.listen(apiEnv.port, () =>
             console.log(`Aplicacao ativa escutando a porta ${apiEnv.port}.`)
         )
-    }).catch((err) => console.log(err));  
+        };
+    }).catch((err) => console.log(err));
 
-connection();
-
+if (process.env.NODE_ENV !== 'test') {
+    connection();
+};

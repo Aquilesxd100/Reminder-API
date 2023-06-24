@@ -45,7 +45,7 @@ describe('Testes do useCase getUserReminders.', () => {
         expect(result.every((reminder) => !reminder.getArchivedStatus())).toBeTruthy();
     });
 
-    test.skip("Deve retornar uma lista de recados que inclui os arquivados.", async () => {
+    test("Deve retornar uma lista de recados que inclui os arquivados.", async () => {
         getRemindersParams.archived = true;
         const result = await getUserReminders(getRemindersParams);
         expect(result.length).toBe(3);

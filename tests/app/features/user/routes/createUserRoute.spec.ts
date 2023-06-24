@@ -59,6 +59,15 @@ describe("Testes da rota de criação de usuario.", () => {
         expect(result.status).toBe(400);
     });
 
+    test("Deve retornar um erro informando que o login já existe.", async () => {
+        await request(app).post(`/newuser/fernando/123a@`);
+        const result = await request(app).post(`/newuser/fernando/123a@`);
+        const responseMessage = result._body.message;
+
+        expect(responseMessage).toBe("Esse login já existe.");
+        expect(result.status).toBe(400);
+    });
+
     test("Deve retornar sucesso ao criar uma nova conta.", async () => {
         const generatedUserName = (crypto.randomUUID()).split("-")[0];
 

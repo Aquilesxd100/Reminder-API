@@ -1,5 +1,5 @@
 import { pgHelper } from "../../../../../src/app/shared/helpers/pg-helper";
-import { app, connection, server } from "../../../../../src";
+import { app, connection } from "../../../../../src";
 const request = require('supertest');
 const crypto = require('crypto');
 
@@ -9,7 +9,6 @@ describe("Testes da rota de login.", () => {
     });
     afterAll(async () => {
         await pgHelper.disconnect();
-        server.close();
     });
 
     test("Deve retornar um erro informando que o login ou senha estão incorretos.", async () => {

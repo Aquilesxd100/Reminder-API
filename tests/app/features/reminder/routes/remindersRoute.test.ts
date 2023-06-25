@@ -115,7 +115,7 @@ describe("Testes da rota de pegar reminders.", () => {
         .set("authorization", `bearer ${token}`);
         const reminders = result._body;
 
-        expect(reminders.every((reminder : any) => !reminder.archived)).toBeTruthy();
+        expect(!reminders.every((reminder : any) => !reminder.archived)).toBeFalsy();
         expect(result.status).toBe(200);
     });
 

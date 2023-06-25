@@ -15,6 +15,6 @@ describe('Testes do useCase deleteUser.', () => {
 
     test("Não deve retornar nada.", async () => {
         const result = await deleteUser(testNewUser);
-        expect(result).toEqual(undefined);
+        expect(result).toBeUndefined();
     });
 });

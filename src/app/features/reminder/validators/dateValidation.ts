@@ -6,7 +6,7 @@ export default function dateValidation(date : string) : boolean | string {
     const day : number = Number(dateArray[0] + dateArray[1]);
     const month : number = Number(dateArray[3] + dateArray[4]);
     const year : number = Number(date.substring(6, 10));
-    if (typeof day !== "number" || typeof month !== "number" || typeof year !== "number") {
+    if (isNaN(day) || isNaN(month) || isNaN(year)) {
         return "Formato de um ou mais dados incorreto.";
     };
     if (day > 31 || day <= 0) {

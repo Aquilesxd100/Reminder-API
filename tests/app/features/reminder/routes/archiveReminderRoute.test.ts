@@ -85,7 +85,7 @@ describe("Testes da rota de archiveReminder.", () => {
         .set("authorization", `bearer ${token}`);
         const message = result._body.message;
 
-        expect(message).toBe("Recado arquivado com sucesso!" || "Recado desarquivado com sucesso!");
+        expect(message).toEqual("Recado arquivado com sucesso!" || "Recado desarquivado com sucesso!");
         expect(result.status).toBe(200);
     });
 });

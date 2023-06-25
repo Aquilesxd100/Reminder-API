@@ -84,6 +84,96 @@ describe("Testes da rota de newReminder.", () => {
         expect(result.status).toBe(400);
     });
 
+    test("Deve retornar um erro referente a um mais dados da data estarem incorretos.", 
+    async () => {
+        
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "cc/gg/kkkk",
+            time: "20:15",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Formato de um ou mais dados incorreto.");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao formato de data estar incorreto.", 
+    async () => {
+        
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "15c03c2025",
+            time: "20:15",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Formato de data incorreto.");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao valor de dia estar incorreto.", 
+    async () => {
+        
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "45/10/2025",
+            time: "20:15",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Valor de dia incorreto.");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao valor de mês estar incorreto.", 
+    async () => {
+        
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "15/00/2025",
+            time: "20:15",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Valor de mês incorreto.");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao valor de ano estar incorreto.", 
+    async () => {
+        
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "15/03/2022",
+            time: "20:15",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Valor de ano incorreto.");
+        expect(result.status).toBe(400);
+    });
+
     test("Deve retornar um erro referente ao formato incorreto de horário.", 
     async () => {
         const result = await request(app)

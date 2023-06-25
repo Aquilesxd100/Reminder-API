@@ -5,7 +5,7 @@ export default function timeValidation(time : string) : boolean | string {
     };
     const hour : number = Number(timeArray[0] + timeArray[1]);
     const minute : number = Number(timeArray[3] + timeArray[4]);
-    if (typeof hour !== "number" || typeof minute !== "number") {
+    if (isNaN(hour) || isNaN(minute)) {
         return "Tipo de um ou mais dados invalido(s).";
     };
     if (hour > 23 || hour < 0) {

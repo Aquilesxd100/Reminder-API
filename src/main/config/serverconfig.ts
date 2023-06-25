@@ -7,6 +7,6 @@ export default function serverConfig(app : Application) {
     app.use(express.json());
     app.use(cors({
         origin: "*",
-        methods: ["PUT"]
+        methods: ["PUT", "DELETE"]
     }));
 };

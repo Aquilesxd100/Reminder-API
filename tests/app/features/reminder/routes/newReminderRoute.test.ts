@@ -101,6 +101,74 @@ describe("Testes da rota de newReminder.", () => {
         expect(result.status).toBe(400);
     });
 
+    test("Deve retornar um erro referente ao tipo de horário incorreto.", 
+    async () => {
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "24/09/2023",
+            time: "cc:aa",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Tipo de um ou mais dados invalido(s).");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao valor de hora incorreto.", 
+    async () => {
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "24/09/2023",
+            time: "24:00",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Valor de hora incorreto.");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao valor de minuto incorreto.", 
+    async () => {
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "24/09/2023",
+            time: "23:61",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Valor de minuto incorreto.");
+        expect(result.status).toBe(400);
+    });
+
+    test("Deve retornar um erro referente ao formato de horário inválido.", 
+    async () => {
+        const result = await request(app)
+        .post(`/newreminder`)
+        .send({
+            action: "Sair para Jantar",
+            date: "24/09/2023",
+            time: "23557",
+            description: "Uma descrição do recado."
+        })
+        .set("authorization", `bearer ${token}`);
+        const message = result._body.message;
+
+        expect(message).toBe("Formato de horário inválido.");
+        expect(result.status).toBe(400);
+    });
+
     test("Deve retornar um erro referente a quantidade incorreta de caracteres na descrição do recado.", 
     async () => {
         const result = await request(app)
